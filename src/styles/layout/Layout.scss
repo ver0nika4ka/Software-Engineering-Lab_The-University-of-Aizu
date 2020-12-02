@@ -1,0 +1,12 @@
+@import "../foundation/mixins.scss";
+@import "../foundation/variable.scss";
+
+.container {
+  max-width: 960px;
+  margin: 88px auto 40px auto;
+
+  @include max-screen($breakpoint-pc) {
+    width: auto;
+    margin: 40px 32px;
+  }
+}

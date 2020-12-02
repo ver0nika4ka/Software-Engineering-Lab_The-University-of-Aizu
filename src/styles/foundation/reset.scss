@@ -10,7 +10,7 @@ h3,
 h4,
 h5,
 h6,
-p,
+// p,
 blockquote,
 pre,
 abbr,
@@ -36,7 +36,7 @@ dl,
 dt,
 dd,
 ol,
-ul,
+// ul,
 li,
 fieldset,
 form,
@@ -74,6 +74,15 @@ video {
   // font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin: 0;
 }
 
 body {
