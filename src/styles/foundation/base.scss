@@ -1,6 +1,22 @@
+@import "../foundation/variable.scss";
+
 body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  line-height: 1.5;
+  color: $jet;
+  text-decoration: none;
+
+  a:visited {
+    color: inherit;
+  }
+}
+
+button {
+  cursor: pointer;
 }

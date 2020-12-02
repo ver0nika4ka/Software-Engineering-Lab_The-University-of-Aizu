@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/layout/App.scss';
 import Top from "../pages/top/Top"
 // research
@@ -30,76 +30,131 @@ import {
 } from "react-router-dom";
 
 export default function App() {
+  const [openMenuItem, setOpenMenuItem] = useState([false, false, false, false]);
+  const changeOpenMenuItem = i => {
+    const newOpenMenuItem = [false, false, false, false]
+    newOpenMenuItem[i] = !openMenuItem[i]
+    setOpenMenuItem(newOpenMenuItem)
+  }
+
+  const [language, setLanguage] = useState("japanese");
+
   return (
     <Router>
       <div >
         <header className="header">
           <nav>
-            <ul>
-              <li>
-                <Link to="/top">TOP</Link>
+            <ul className="menu">
+              <li className="menu_item">
+                <Link to="/top">Top</Link>
               </li>
-              <li>
-                <ul>
-                  <li>
-                    <Link to="/research/about_us">研究室について</Link>
-                  </li>
-                  <li>
-                    <Link to="/research/graduation_research_themes">卒業テーマ</Link>
-                  </li>
-                  <li>
-                    <Link to="/research/international_relations">国際交流</Link>
-                  </li>
-                  <li>
-                    <Link to="/research/news">ニュース</Link>
-                  </li>
-                </ul>
+
+              <li className="menu_item noLink"
+                onClick={() => changeOpenMenuItem(0)}>
+                <a>研究</a>
+                {openMenuItem[0] &&
+                  <ul className="menu_list">
+                    <li className="menu_item">
+                      <Link to="/research/about_us">研究室について</Link>
+                    </li>
+                    <li className="menu_item">
+                      <Link to="/research/graduation_research_themes">卒業テーマ</Link>
+                    </li>
+                    <li className="menu_item">
+                      <Link to="/research/international_relations">国際交流</Link>
+                    </li>
+                    <li className="menu_item">
+                      <Link to="/research/news">ニュース</Link>
+                    </li>
+                  </ul>
+                }
               </li>
-              <li>
+
+
+              <li className="menu_item">
                 <Link to="/publication_list">論文集</Link>
               </li>
-              <li>
-                <Link to="/it_specialist_program">ITスペシャリストプログラム</Link>
+
+              <li className="menu_item noLink"
+                onClick={() => changeOpenMenuItem(1)}>
+                <a>教育</a>
+                {openMenuItem[1] &&
+                  <ul className="menu_list">
+                    <li className="menu_item">
+                      <Link to="/it_specialist_program">ITスペシャリストプログラム</Link>
+                    </li>
+                  </ul>
+                }
               </li>
-              <li>
-                <ul>
-                  <li>
-                    <Link to="/members/member">メンバー</Link>
-                  </li>
-                  <li>
-                    <Link to="/members/gaduated">卒業生</Link>
-                  </li>
-                  <li>
-                    <Link to="/members/prospective_students">学生募集</Link>
-                  </li>
-                </ul>
+
+              <li className="menu_item noLink"
+                onClick={() => changeOpenMenuItem(2)}>
+                <a>メンバー</a>
+                {openMenuItem[2] &&
+                  <ul className="menu_list">
+                    <li className="menu_item">
+                      <Link to="/members/member">メンバー</Link>
+                    </li>
+                    <li className="menu_item">
+                      <Link to="/members/gaduated">卒業生</Link>
+                    </li>
+                    <li className="menu_item">
+                      <Link to="/members/prospective_students">学生募集</Link>
+                    </li>
+                  </ul>
+                }
               </li>
-              <li>
-                <Link to="/achievements/achievements">業績</Link>
+
+              <li className="menu_item noLink"
+                onClick={() => changeOpenMenuItem(3)}>
+                <a>業績</a>
+                {openMenuItem[3] &&
+                  <ul className="menu_list">
+                    <li className="menu_item">
+                      <Link to="/achievements/achievements">業績</Link>
+                    </li>
+                    <li className="menu_item">
+                      <Link to="/achievements/conferences_and_workshops">国際学会</Link>
+                    </li>
+                  </ul>
+                }
               </li>
-              <li>
-                <Link to="/achievements/conferences_and_workshops">国際学会</Link>
-              </li>
-              <li>
-                <ul>
-                  <li>
-                    <Link to="/others/internationl_conferences">ギャラリー</Link>
-                  </li>
-                  <li>
-                    <a href="https://www.u-aizu.ac.jp/" target="_blank" rel="noopener noreferrer">会津大学</a>
-                  </li>
-                  <li>
-                    <a href="https://www.u-aizu.ac.jp/access/" target="_blank" rel="noopener noreferrer">大学へのアクセス</a>
-                  </li>
-                  <li>
-                    <Link to="/others/statistics">アクセス統計</Link>
-                  </li>
-                  <li>
-                    <Link to="/others/developers">開発者</Link>
-                  </li>
-                </ul>
+
+              <li className="menu_item noLink"
+                onClick={() => changeOpenMenuItem(4)}>
+                <a>その他</a>
+                {openMenuItem[4] &&
+                  <ul className="menu_list">
+                    <li className="menu_item">
+                      <Link to="/others/internationl_conferences">ギャラリー</Link>
+                    </li>
+                    <li className="menu_item">
+                      <a href="https://www.u-aizu.ac.jp/" target="_blank" rel="noopener noreferrer">会津大学</a>
+                    </li>
+                    <li className="menu_item">
+                      <a href="https://www.u-aizu.ac.jp/access/" target="_blank" rel="noopener noreferrer">大学へのアクセス</a>
+                    </li>
+                    <li className="menu_item">
+                      <Link to="/others/statistics">アクセス統計</Link>
+                    </li>
+                    <li className="menu_item">
+                      <Link to="/others/developers">開発者</Link>
+                    </li>
+                  </ul>
+                }
               </li>
             </ul>
+
+            <div className="languageButtons">
+              <button className={`languageButtons_button ${language === "japanese" ? "active" : ""}`}
+                onClick={() => {
+                  setLanguage("japanese")
+                }}>日本語</button>
+              <button className={`languageButtons_button ${language === "english" ? "active" : ""}`}
+                onClick={() => {
+                  setLanguage("english")
+                }}>English</button>
+            </div>
           </nav>
         </header>
 

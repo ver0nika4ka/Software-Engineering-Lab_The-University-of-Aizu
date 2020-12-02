@@ -1,3 +1,5 @@
+@import "../foundation/variable.scss";
+
 .App {
   text-align: center;
 }
@@ -40,7 +42,74 @@
 /* header */
 
 .header {
-  ul {
-    display: flex;
+  background-color: $jet;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 970px;
+}
+
+.menu {
+  height: 40px;
+  display: flex;
+}
+
+.menu_item {
+  padding: 8px 16px;
+  cursor: pointer;
+
+  a {
+    color: $lightGray;
+  }
+}
+
+.menu_item.noLink {
+  cursor: default;
+}
+
+.menu_list {
+  background-color: white;
+  border: 1px solid $jet;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  position: absolute;
+  top: 39px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+
+  .menu_item {
+    padding: 8px 16px;
+
+    a {
+      color: $jet;
+    }
+
+    &:hover {
+      background-color: $cultured;
+    }
+  }
+}
+
+.languageButtons {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.languageButtons_button {
+  background-color: #fff;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: none;
+  height: 28px;
+
+  &:first-child {
+    margin-right: 4px;
+  }
+
+  &.active {
+    background-color: $lightGray;
   }
 }
