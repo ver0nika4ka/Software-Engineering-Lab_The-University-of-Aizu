@@ -1,4 +1,6 @@
 import React from 'react';
+// i18n
+import { useTranslation } from 'react-i18next';
 // images
 import Logo from '../../images/top/aizu_logo.gif'
 import Top1 from '../../images/top/top_1.jpg'
@@ -12,6 +14,8 @@ import { Carousel } from 'react-responsive-carousel';
 import '../../styles/page/top/top.scss'
 
 const Top = () => {
+  const [t, i18n] = useTranslation();
+
   return (
     <>
       <div className="top">
