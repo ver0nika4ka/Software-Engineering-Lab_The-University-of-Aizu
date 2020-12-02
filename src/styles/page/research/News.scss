@@ -16,6 +16,12 @@
   margin-right: 24px;
   cursor: pointer;
   box-sizing: border-box;
+
+  @include max-screen($breakpoint-tablet) {
+    max-width: none;
+    padding: 16px;
+    margin: 0;
+  }
 }
 
 .News_item {
@@ -37,10 +43,40 @@
 .News_mailContents {
   height: calc(100vh - 128px);
   overflow: hidden;
+
+  @include max-screen($breakpoint-tablet) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+}
+
+.News_mailContentsModal {
+  display: none;
+
+  @include max-screen($breakpoint-tablet) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+  }
 }
 
 .News_mailTitle {
   padding: 0 0 16px 8px;
+  z-index: 15;
+
+  @include max-screen($breakpoint-tablet) {
+    color: white;
+    width: 80vw;
+    margin: auto auto 0 auto;
+  }
 }
 
 .News_mailBody {
@@ -50,6 +86,7 @@
   background-color: $cultured;
   padding: 24px;
   border-radius: 16px;
+  z-index: 15;
 
   > div {
     overflow: scroll;
@@ -62,5 +99,11 @@
     line-height: 1.5;
     font-size: 1.6rem;
     word-break: break-all;
+  }
+
+  @include max-screen($breakpoint-tablet) {
+    max-height: 70vh;
+    width: 80vw;
+    margin: 0 auto auto auto;
   }
 }

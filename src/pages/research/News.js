@@ -32,8 +32,6 @@ function News() {
     return d.split('T')[0].split('-').join('/')
   }
 
-  console.log(mails)
-
   const displayBody = body => {
     return "<span style=\"white-space: pre;\">".concat(body.concat("</span>"))
   }
@@ -54,10 +52,19 @@ function News() {
               </div>
             ))}
           </div>
-          <div className="News_mailContents flex column" >
-            <h3 className="News_mailTitle">{mails[selectedMail].subject}</h3>
-            <div className="News_mailBody" dangerouslySetInnerHTML={{ __html: displayBody(mails[selectedMail].body) }} ></div>
-          </div>
+          {selectedMail != null ?
+            <div className="News_mailContents flex column">
+              <div className="News_mailContentsModal"
+                onClick={() => {
+                  setSelectedMail(null)
+                }}>
+              </div>
+              <h3 className="News_mailTitle">{mails[selectedMail].subject}</h3>
+              <div className="News_mailBody" dangerouslySetInnerHTML={{ __html: displayBody(mails[selectedMail].body) }} ></div>
+            </div>
+            :
+            null
+          }
         </>
         :
         <>
