@@ -2,7 +2,26 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from "./home"
-import Research from "./research/research"
+// research
+import AboutUs from "./research/AboutUs"
+import GraduationResearchThemes from "./research/GraduationResearchThemes"
+import InternationalRelations from "./research/InternationalRelations"
+import News from "./research/News"
+// publication_list
+import Publications from "./publication_list/Publications"
+// education
+import ItSpecialistProgram from "./education/ItSpecialistProgram"
+// members
+import Gaduated from "./members/Gaduated"
+import Members from "./members/Members"
+import ProspectiveStudents from "./members/ProspectiveStudents"
+// achievements
+import Achievements from "./achievements/Achievements"
+import ConferencesAndWorkshops from "./achievements/ConferencesAndWorkshops"
+// others
+import InternationlConferences from "./others/InternationlConferences"
+import Statistics from "./others/Statistics"
+import Developers from "./others/Developers"
 
 import {
   BrowserRouter as Router,
@@ -18,20 +37,116 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/home">Home</Link>
+              <Link to="/top">TOP</Link>
             </li>
             <li>
-              <Link to="/research">Research</Link>
+              <ul>
+                <li>
+                  <Link to="/research/about_us">研究室について</Link>
+                </li>
+                <li>
+                  <Link to="/research/graduation_research_themes">卒業テーマ</Link>
+                </li>
+                <li>
+                  <Link to="/research/international_relations">国際交流</Link>
+                </li>
+                <li>
+                  <Link to="/research/news">ニュース</Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link to="/publication_list">論文集</Link>
+            </li>
+            <li>
+              <Link to="/it_specialist_program">ITスペシャリストプログラム</Link>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <Link to="/members/member">メンバー</Link>
+                </li>
+                <li>
+                  <Link to="/members/gaduated">卒業生</Link>
+                </li>
+                <li>
+                  <Link to="/members/prospective_students">学生募集</Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link to="/achievements/achievements">業績</Link>
+            </li>
+            <li>
+              <Link to="/achievements/conferences_and_workshops">国際学会</Link>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <Link to="/others/internationl_conferences">ギャラリー</Link>
+                </li>
+                <li>
+                  <a href="https://www.u-aizu.ac.jp/" target="_blank">会津大学</a>
+                </li>
+                <li>
+                  <a href="https://www.u-aizu.ac.jp/access/" target="_blank">大学へのアクセス</a>
+                </li>
+                <li>
+                  <Link to="/others/statistics">アクセス統計</Link>
+                </li>
+                <li>
+                  <Link to="/others/developers">開発者</Link>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
 
         <Switch>
-          <Route path="/home">
+          <Route path="/top">
             <Home />
           </Route>
-          <Route path="/research">
-            <Research />
+          <Route path="/research/about_us">
+            <AboutUs />
+          </Route>
+          <Route path="/research/graduation_research_themes">
+            <GraduationResearchThemes />
+          </Route>
+          <Route path="/research/international_relations">
+            <InternationalRelations />
+          </Route>
+          <Route path="/research/news">
+            <News />
+          </Route>
+          <Route path="/publication_list">
+            <Publications />
+          </Route>
+          <Route path="/it_specialist_program">
+            <ItSpecialistProgram />
+          </Route>
+          <Route path="/members/gaduated">
+            <Gaduated />
+          </Route>
+          <Route path="/members/member">
+            <Members />
+          </Route>
+          <Route path="/members/prospective_students">
+            <ProspectiveStudents />
+          </Route>
+          <Route path="/achievements/achievements">
+            <Achievements />
+          </Route>
+          <Route path="/achievements/conferences_and_workshops">
+            <ConferencesAndWorkshops />
+          </Route>
+          <Route path="/others/internationl_conferences">
+            <InternationlConferences />
+          </Route>
+          <Route path="/others/statistics">
+            <Statistics />
+          </Route>
+          <Route path="/others/developers">
+            <Developers />
           </Route>
         </Switch>
       </div>
