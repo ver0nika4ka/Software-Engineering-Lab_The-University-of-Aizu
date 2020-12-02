@@ -7,3 +7,16 @@ $lightGray: #cccccc;
 $platinum: #e6e6e6;
 $cultured: #f3f3f3;
 $white: #ffffff;
+
+$breakpoint-pc: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+$zIndexLayer: (
+  background: -10,
+  underLay: 5,
+  standardLay: 10,
+  upperLay: 20,
+  modalLay: 30,
+  loadingLay: 40,
+);

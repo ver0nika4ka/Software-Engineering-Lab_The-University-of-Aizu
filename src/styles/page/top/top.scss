@@ -1,9 +1,17 @@
+@import "../../foundation/mixins.scss";
+@import "../../foundation/variable.scss";
+
 .top {
   margin: 40px auto;
+  width: 80vw;
 }
 
 .home_header {
   margin-bottom: 40px;
+
+  @include max-screen($breakpoint-tablet) {
+    flex-wrap: wrap;
+  }
 }
 
 .home_logo {
@@ -11,7 +19,7 @@
   margin-top: auto;
   margin-bottom: auto;
   padding: 0 4px;
-  
+
   img {
     height: 100%;
   }
@@ -21,10 +29,18 @@
   margin-top: auto;
   margin-bottom: auto;
   padding: 0 4px;
+  font-size: 4vw;
+  text-align: center;
+
+  @include max-screen($breakpoint-tablet) {
+    width: 100%;
+    margin: 20px auto 0 auto;
+    font-size: 7vw;
+  }
 }
 
 .home_carousel {
-  width: 80%;
+  width: 80vw;
   margin: auto;
 }
 

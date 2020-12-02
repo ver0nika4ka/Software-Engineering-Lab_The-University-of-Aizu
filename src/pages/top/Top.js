@@ -18,9 +18,7 @@ const Top = () => {
         <div className="home_logo">
           <img src={Logo}></img>
         </div>
-        <div className="home_title">
-          <h1>ソフトウェア工学講座</h1>
-        </div>
+        <h1 className="home_title">ソフトウェア工学講座</h1>
       </div>
 
       <div className="home_carousel">
