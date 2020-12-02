@@ -1,27 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
-import Top from "./pages/top/Top"
+import '../styles/layout/App.scss';
+import Top from "../pages/top/Top"
 // research
-import AboutUs from "./pages/research/AboutUs"
-import GraduationResearchThemes from "./pages/research/GraduationResearchThemes"
-import InternationalRelations from "./pages/research/InternationalRelations"
-import News from "./pages/research/News"
+import AboutUs from "../pages/research/AboutUs"
+import GraduationResearchThemes from "../pages/research/GraduationResearchThemes"
+import InternationalRelations from "../pages/research/InternationalRelations"
+import News from "../pages/research/News"
 // publication_list
-import Publications from "./pages/publication_list/Publications"
+import Publications from "../pages/publication_list/Publications"
 // education
-import ItSpecialistProgram from "./pages/education/ItSpecialistProgram"
+import ItSpecialistProgram from "../pages/education/ItSpecialistProgram"
 // members
-import Gaduated from "./pages/members/Gaduated"
-import Members from "./pages/members/Members"
-import ProspectiveStudents from "./pages/members/ProspectiveStudents"
+import Gaduated from "../pages/members/Gaduated"
+import Members from "../pages/members/Members"
+import ProspectiveStudents from "../pages/members/ProspectiveStudents"
 // achievements
-import Achievements from "./pages/achievements/Achievements"
-import ConferencesAndWorkshops from "./pages/achievements/ConferencesAndWorkshops"
+import Achievements from "../pages/achievements/Achievements"
+import ConferencesAndWorkshops from "../pages/achievements/ConferencesAndWorkshops"
 // others
-import InternationlConferences from "./pages/others/InternationlConferences"
-import Statistics from "./pages/others/Statistics"
-import Developers from "./pages/others/Developers"
+import InternationlConferences from "../pages/others/InternationlConferences"
+import Statistics from "../pages/others/Statistics"
+import Developers from "../pages/others/Developers"
 
 import {
   BrowserRouter as Router,
@@ -87,10 +86,10 @@ export default function App() {
                     <Link to="/others/internationl_conferences">ギャラリー</Link>
                   </li>
                   <li>
-                    <a href="https://www.u-aizu.ac.jp/" target="_blank">会津大学</a>
+                    <a href="https://www.u-aizu.ac.jp/" target="_blank" rel="noopener noreferrer">会津大学</a>
                   </li>
                   <li>
-                    <a href="https://www.u-aizu.ac.jp/access/" target="_blank">大学へのアクセス</a>
+                    <a href="https://www.u-aizu.ac.jp/access/" target="_blank" rel="noopener noreferrer">大学へのアクセス</a>
                   </li>
                   <li>
                     <Link to="/others/statistics">アクセス統計</Link>
