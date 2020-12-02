@@ -3,7 +3,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from "react-i18next";
 
 // the translations
-// (tip move them in a JSON file and import them)
+// (tip move them in a JSON file and import them）
 const resources = {
   ja:
   {
@@ -129,6 +129,45 @@ const resources = {
         'モジュールの学習スタイル',
       'スライドを入手する':
         'スライドを入手する',
+      // InternationalRelations
+      '国際交流':
+        '国際交流',
+      'ソフトウェア工学の研究室では多々の大学と協力のもと共同研究や教育にも力を入れています。':
+        'ソフトウェア工学の研究室では多々の大学と協力のもと共同研究や教育にも力を入れています。',
+      'サンクトペテルブルク国立大学（Saint-Petersburg State University）':
+        'サンクトペテルブルク国立大学（Saint-Petersburg State University）',
+      ' や ':
+        ' や ',
+      'サンクトペテルブルク工科大学（Peter the Great Saint-Petersburg Polytechnic University）':
+        'サンクトペテルブルク工科大学（Peter the Great Saint-Petersburg Polytechnic University）',
+      'などと協力しています。':
+        'などと協力しています。',
+      '私たちは協力関係にあるロシアの大学と交換留学の枠を設けています。2006年から始まったこのプログラムは毎年1人から2人の学生をロシアのサンクトペテルブルク国立大学へと送り毎年開催される':
+        '私たちは協力関係にあるロシアの大学と交換留学の枠を設けています。2006年から始まったこのプログラムは毎年1人から2人の学生をロシアのサンクトペテルブルク国立大学へと送り毎年開催される',
+      '国際学会（the Annual Conference on Control Processes and Stability）':
+        '国際学会（the Annual Conference on Control Processes and Stability）',
+      'にて論文の発表を行っています。また、ロシアの学生は会津大学で行われるイベント等に積極的に参加しています。':
+        'にて論文の発表を行っています。また、ロシアの学生は会津大学で行われるイベント等に積極的に参加しています。',
+      '共同研究のグループは':
+        '共同研究のグループは',
+      '情報検索やソフトウェア工学の分野':
+        '情報検索やソフトウェア工学の分野',
+      'において研究を行っています。':
+        'において研究を行っています。',
+      '留学生の受け入れ':
+        '留学生の受け入れ',
+      '2015年~2017年には中国、ロシア、ベラルーシからの学生が私たちの研究室メンバーとなりました。 ロシアそしてベラルーシからの学生は、日本大使館そして大学の推薦により海外学生のための日本政府の奨学金制度を受けています。 中国からの学生は':
+        '2015年~2017年には中国、ロシア、ベラルーシからの学生が私たちの研究室メンバーとなりました。 ロシアそしてベラルーシからの学生は、日本大使館そして大学の推薦により海外学生のための日本政府の奨学金制度を受けています。 中国からの学生は',
+      'Global Educational Program':
+        'Global Educational Program',
+      'を受けています。':
+        'を受けています。',
+      '2010年から始まった、':
+        '2010年から始まった、',
+      '台湾の朝陽科技大学（Chaoyang University of Technolog）':
+        '台湾の朝陽科技大学（Chaoyang University of Technolog）',
+      'から数名の大学院生を対象にしたプログラム（Dual - Degree Program）が実施されています。このプログラムは生徒が生徒自身が通う大学と留学先の大学の両大学で単位を取得でき、両大学共同の目的や認識を深めようというものです。また、国際的な交流や長期的な関係性を築こうといったプログラムでもあります。国際的な本プログラムは2009年に朝陽科技大学と覚書を交わしました。':
+        'から数名の大学院生を対象にしたプログラム（Dual - Degree Program）が実施されています。このプログラムは生徒が生徒自身が通う大学と留学先の大学の両大学で単位を取得でき、両大学共同の目的や認識を深めようというものです。また、国際的な交流や長期的な関係性を築こうといったプログラムでもあります。国際的な本プログラムは2009年に朝陽科技大学と覚書を交わしました。',
     },
   },
   en:
@@ -254,6 +293,45 @@ const resources = {
         'Learnig Style Module',
       'スライドを入手する':
         'Chick here to get the slides',
+      // InternationalRelations
+      '国際交流':
+        'International Relations',
+      'ソフトウェア工学の研究室では多々の大学と協力のもと共同研究や教育にも力を入れています。':
+        'Software Engineering Lab is responsible for coordination joint research and education projects with partner universities: ',
+      'サンクトペテルブルク国立大学（Saint-Petersburg State University）':
+        'Saint-Petersburg State University',
+      ' や ':
+        ' and ',
+      'サンクトペテルブルク工科大学（Peter the Great Saint-Petersburg Polytechnic University）':
+        'Peter the Great Saint-Petersburg Polytechnic University',
+      'などと協力しています。':
+        '.',
+      '私たちは協力関係にあるロシアの大学と交換留学の枠を設けています。2006年から始まったこのプログラムは毎年1人から2人の学生をロシアのサンクトペテルブルク国立大学へと送り毎年開催される':
+        'We established mutually beneficial exchange relationships with our Russian partners: Every year, beginning from 2006, we dispatch one – two our best students to Saint-Petersburg, Russia to present their papers at ',
+      '国際学会（the Annual Conference on Control Processes and Stability）':
+        'the Annual Conference on Control Processes and Stability. ',
+      'にて論文の発表を行っています。また、ロシアの学生は会津大学で行われるイベント等に積極的に参加しています。':
+        'Russian students actively participate in scientific events organized by our university.',
+      '共同研究のグループは':
+        'The joint research group actively works in the area of ',
+      '情報検索やソフトウェア工学の分野':
+        'Information Retrieval and Software Engineering',
+      'において研究を行っています。':
+        '.',
+      '留学生の受け入れ':
+        'Foreign Students',
+      '2015年~2017年には中国、ロシア、ベラルーシからの学生が私たちの研究室メンバーとなりました。 ロシアそしてベラルーシからの学生は、日本大使館そして大学の推薦により海外学生のための日本政府の奨学金制度を受けています。 中国からの学生は':
+        'In 2015 - 2017, international students from China, Russia and Belarus become lab members. Students from Russia and Belarus are successful applicants for the Japanese Government Scholarship Program for the International students through the recommendation by the universities and by the Japanese embassies. Students from China are successful applicant for ',
+      'Global Educational Program':
+        'the Global Educational Program',
+      'を受けています。':
+        '.',
+      '2010年から始まった、':
+        'Beginning from 2010, several master student from ',
+      '台湾の朝陽科技大学（Chaoyang University of Technolog）':
+        ' Chaoyang University of Technology, ',
+      'から数名の大学院生を対象にしたプログラム（Dual - Degree Program）が実施されています。このプログラムは生徒が生徒自身が通う大学と留学先の大学の両大学で単位を取得でき、両大学共同の目的や認識を深めようというものです。また、国際的な交流や長期的な関係性を築こうといったプログラムでもあります。国際的な本プログラムは2009年に朝陽科技大学と覚書を交わしました。':
+        'Taiwan, have been enrolled in the dual-degree program (DDP). A DDP is a system where students can earn two degrees, from the home and the partner university through mutual recognition of credits attained at the universities, and the goal of the program includes fostering excellent human resources educated internationally, as well as strengthening relations between partner universities through concrete exchanges. The Memorandum of Understanding establishing the international dual degree program for students of our university and Chaoyang University of Technology was concluded in 2009.',
     },
   },
 };

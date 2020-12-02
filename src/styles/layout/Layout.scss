@@ -10,3 +10,34 @@
     margin: 88px 32px 40px 32px;
   }
 }
+
+.container_content {
+  margin-bottom: 128px;
+
+  ul {
+    margin-bottom: 24px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+}
+
+.container_contentFrame {
+  margin-bottom: 64px;
+}
+
+.container_title {
+  margin-bottom: 40px;
+}
+
+.container_subtitle {
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.container_image {
+  display: block;
+  margin: auto auto 24px auto;
+  width: 80vw;
+}

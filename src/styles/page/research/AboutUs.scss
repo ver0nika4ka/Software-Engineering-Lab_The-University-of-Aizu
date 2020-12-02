@@ -1,21 +1,7 @@
 @import "../../foundation/mixins.scss";
 @import "../../foundation/variable.scss";
 
-.AboutUs_content {
-  li {
-    margin-bottom: 8px;
-  }
-}
-
-.AboutUs_title {
-  margin-bottom: 24px;
-}
-
-.AboutUs_subtitle {
-  margin-bottom: 16px;
-  width: 100%;
-}
-
 .AboutUs_image {
   float: left;
+  width: 256px;
 }
