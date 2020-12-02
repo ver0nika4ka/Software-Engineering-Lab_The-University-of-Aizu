@@ -1,10 +1,16 @@
 @import "../foundation/variable.scss";
 
+html {
+  font-size: 62.5%;
+  background-color: $jet;
+}
+
 body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
 }
 
 a {
@@ -17,6 +23,18 @@ a {
   }
 }
 
+h1 {
+  font-size: 4.8rem;
+}
+
 button {
   cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
 }

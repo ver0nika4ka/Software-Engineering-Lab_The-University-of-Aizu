@@ -111,10 +111,10 @@ export default function App() {
               <li className="menu_item">
                 <Link to="/top">{t('Top')}</Link>
               </li>
-
+              
               <li className="menu_item noLink"
                 onClick={() => changeOpenMenuItem(0)}>
-                <a href="">{t('研究')}</a>
+                <a >{t('研究')}</a>
                 {openMenuItem[0] &&
                   <ul className="menu_list">
                     <li className="menu_item">
@@ -140,7 +140,7 @@ export default function App() {
 
               <li className="menu_item noLink"
                 onClick={() => changeOpenMenuItem(1)}>
-                <a href="">{t('教育')}</a>
+                <a >{t('教育')}</a>
                 {openMenuItem[1] &&
                   <ul className="menu_list">
                     <li className="menu_item">
@@ -152,7 +152,7 @@ export default function App() {
 
               <li className="menu_item noLink"
                 onClick={() => changeOpenMenuItem(2)}>
-                <a href="">{t('メンバー')}</a>
+                <a >{t('メンバー')}</a>
                 {openMenuItem[2] &&
                   <ul className="menu_list">
                     <li className="menu_item">
@@ -170,7 +170,7 @@ export default function App() {
 
               <li className="menu_item noLink"
                 onClick={() => changeOpenMenuItem(3)}>
-                <a href="">{t('業績')}</a>
+                <a >{t('業績')}</a>
                 {openMenuItem[3] &&
                   <ul className="menu_list">
                     <li className="menu_item">
@@ -185,7 +185,7 @@ export default function App() {
 
               <li className="menu_item noLink"
                 onClick={() => changeOpenMenuItem(4)}>
-                <a href="">{t('その他')}</a>
+                <a >{t('その他')}</a>
                 {openMenuItem[4] &&
                   <ul className="menu_list">
                     <li className="menu_item">
