@@ -111,7 +111,7 @@ export default function App() {
               <li className="menu_item">
                 <Link to="/top">{t('Top')}</Link>
               </li>
-              
+
               <li className="menu_item noLink"
                 onClick={() => changeOpenMenuItem(0)}>
                 <a >{t('研究')}</a>
@@ -223,7 +223,7 @@ export default function App() {
             <Top />
           </Route>
           <Route path="/research/about_us">
-            <AboutUs />
+            <AboutUs title={t('研究室について')} />
           </Route>
           <Route path="/research/graduation_research_themes">
             <GraduationResearchThemes />
