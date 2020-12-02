@@ -3,15 +3,15 @@ import React from 'react';
 import SEO from 'react-seo-component'
 import { siteName, description } from '../siteconfig.json'
 
-export default function App({ title, pathname, children }) {
+export default function App({ title, path, children }) {
   return (
     <div >
       <SEO
-        title={title.title}
+        title={title}
         titleTemplate={siteName}
         titleSeparator={`|`}
         description={description || 'nothin’'}
-        pathname={pathname}
+        pathname={path}
       />
       {children}
     </div>

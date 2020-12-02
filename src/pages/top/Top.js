@@ -17,29 +17,27 @@ const Top = () => {
   const [t, i18n] = useTranslation();
 
   return (
-    <>
-      <div className="top">
-        <div className="home_header flex center">
-          <div className="home_logo">
-            <img src={Logo}></img>
-          </div>
-          <h1 className="home_title">{t('ソフトウェア工学講座')}</h1>
+    <div className="top">
+      <div className="home_header flex center">
+        <div className="home_logo">
+          <img src={Logo}></img>
         </div>
-
-        <div className="home_carousel">
-          <Carousel infiniteLoop autoPlay showStatus={false} showThumbs={false} stopOnHover>
-            <img src={Top1} />
-            <img src={Top2} />
-            <img src={Top3} />
-          </Carousel>
-        </div>
-
-        <div className="home_footer flex center">
-          <p>{t('訪問者数')}: </p>
-          <ScriptTag isHydrating={true} type="text/javascript" src="//counter.websiteout.net/js/18/0/7325/1" />
-        </div>
+        <h1 className="home_title">{t('ソフトウェア工学講座')}</h1>
       </div>
-    </>
+
+      <div className="home_carousel">
+        <Carousel infiniteLoop autoPlay showStatus={false} showThumbs={false} stopOnHover>
+          <img src={Top1} />
+          <img src={Top2} />
+          <img src={Top3} />
+        </Carousel>
+      </div>
+
+      <div className="home_footer flex center">
+        <p>{t('訪問者数')}: </p>
+        <ScriptTag isHydrating={true} type="text/javascript" src="//counter.websiteout.net/js/18/0/7325/1" />
+      </div>
+    </div>
   );
 }
 

@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Layout from '../layouts/Layout'
 // i18n
 import { useTranslation } from 'react-i18next';
 // top
@@ -45,6 +46,84 @@ export default function App() {
   useEffect(() => {
     i18n.changeLanguage(lang);
   }, [lang, i18n]);
+
+  const components = [
+    {
+      title: null,
+      component: Top,
+      path: "/top",
+    },
+    {
+      title: '研究室について',
+      component: AboutUs,
+      path: "/research/about_us",
+    },
+    {
+      title: '卒業テーマ',
+      component: GraduationResearchThemes,
+      path: "/research/graduation_research_themes",
+    },
+    {
+      title: '国際交流',
+      component: InternationalRelations,
+      path: "/research/international_relations",
+    },
+    {
+      title: 'ニュース',
+      component: News,
+      path: "/research/news",
+    },
+    {
+      title: '論文集',
+      component: Publications,
+      path: "/publication_list",
+    },
+    {
+      title: 'ITスペシャリストプログラム',
+      component: ItSpecialistProgram,
+      path: "/it_specialist_program",
+    },
+    {
+      title: '卒業生',
+      component: Gaduated,
+      path: "/members/gaduated",
+    },
+    {
+      title: 'メンバー',
+      component: Members,
+      path: "/members/member",
+    },
+    {
+      title: '学生募集',
+      component: ProspectiveStudents,
+      path: "/members/prospective_students",
+    },
+    {
+      title: '業績',
+      component: Achievements,
+      path: "/achievements/achievements",
+    },
+    {
+      title: '国際学会',
+      component: ConferencesAndWorkshops,
+      path: "/achievements/conferences_and_workshops",
+    },
+    {
+      title: 'ギャラリー',
+      component: InternationlConferences,
+      path: "/others/internationl_conferences",
+    },
+    {
+      title: 'アクセス統計',
+      component: Statistics,
+      path: "/others/statistics",
+    },
+    {
+      title: '開発者',
+      component: Developers,
+      path: "/others/developers",
+    },
+  ]
 
   return (
     <Router>
@@ -163,51 +242,15 @@ export default function App() {
         </header>
 
         <Switch>
-          <Route path="/top">
-            <Top />
-          </Route>
-          <Route path="/research/about_us">
-            <AboutUs title={t('研究室について')} />
-          </Route>
-          <Route path="/research/graduation_research_themes">
-            <GraduationResearchThemes />
-          </Route>
-          <Route path="/research/international_relations">
-            <InternationalRelations />
-          </Route>
-          <Route path="/research/news">
-            <News />
-          </Route>
-          <Route path="/publication_list">
-            <Publications />
-          </Route>
-          <Route path="/it_specialist_program">
-            <ItSpecialistProgram />
-          </Route>
-          <Route path="/members/gaduated">
-            <Gaduated />
-          </Route>
-          <Route path="/members/member">
-            <Members />
-          </Route>
-          <Route path="/members/prospective_students">
-            <ProspectiveStudents />
-          </Route>
-          <Route path="/achievements/achievements">
-            <Achievements />
-          </Route>
-          <Route path="/achievements/conferences_and_workshops">
-            <ConferencesAndWorkshops />
-          </Route>
-          <Route path="/others/internationl_conferences">
-            <InternationlConferences />
-          </Route>
-          <Route path="/others/statistics">
-            <Statistics />
-          </Route>
-          <Route path="/others/developers">
-            <Developers />
-          </Route>
+          {components.map((component, i) => {
+            return (
+              <Route key={i} path={component.path}>
+                <Layout title={t(component.title)} path={component.path}>
+                  <component.component />
+                </Layout>
+              </Route>
+            )
+          })}
         </Switch>
       </div>
     </Router>

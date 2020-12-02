@@ -59,11 +59,14 @@ nav {
 }
 
 .menu_item {
-  padding: 8px 16px;
   cursor: pointer;
 
   a {
+    display: block;
+    box-sizing: border-box;
+    height: 100%;
     color: $lightGray;
+    padding: 8px 16px;
   }
 }
 
@@ -81,8 +84,6 @@ nav {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 
   .menu_item {
-    padding: 8px 16px;
-
     a {
       color: $jet;
     }
