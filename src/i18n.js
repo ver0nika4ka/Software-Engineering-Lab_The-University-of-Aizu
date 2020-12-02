@@ -168,6 +168,17 @@ const resources = {
         '台湾の朝陽科技大学（Chaoyang University of Technolog）',
       'から数名の大学院生を対象にしたプログラム（Dual - Degree Program）が実施されています。このプログラムは生徒が生徒自身が通う大学と留学先の大学の両大学で単位を取得でき、両大学共同の目的や認識を深めようというものです。また、国際的な交流や長期的な関係性を築こうといったプログラムでもあります。国際的な本プログラムは2009年に朝陽科技大学と覚書を交わしました。':
         'から数名の大学院生を対象にしたプログラム（Dual - Degree Program）が実施されています。このプログラムは生徒が生徒自身が通う大学と留学先の大学の両大学で単位を取得でき、両大学共同の目的や認識を深めようというものです。また、国際的な交流や長期的な関係性を築こうといったプログラムでもあります。国際的な本プログラムは2009年に朝陽科技大学と覚書を交わしました。',
+      // Publications
+      '指導教員':
+        '指導教員',
+      'ヴィタリー・クリューエフ 教授':
+        'ヴィタリー・クリューエフ 教授',
+      'エフゲニー・ピシキン 教授':
+        'エフゲニー・ピシキン 教授',
+      'モハメド・ハマダ 教授':
+        'モハメド・ハマダ 教授',
+      '学生による論文':
+        '学生による論文',
     },
   },
   en:
@@ -332,6 +343,17 @@ const resources = {
         ' Chaoyang University of Technology, ',
       'から数名の大学院生を対象にしたプログラム（Dual - Degree Program）が実施されています。このプログラムは生徒が生徒自身が通う大学と留学先の大学の両大学で単位を取得でき、両大学共同の目的や認識を深めようというものです。また、国際的な交流や長期的な関係性を築こうといったプログラムでもあります。国際的な本プログラムは2009年に朝陽科技大学と覚書を交わしました。':
         'Taiwan, have been enrolled in the dual-degree program (DDP). A DDP is a system where students can earn two degrees, from the home and the partner university through mutual recognition of credits attained at the universities, and the goal of the program includes fostering excellent human resources educated internationally, as well as strengthening relations between partner universities through concrete exchanges. The Memorandum of Understanding establishing the international dual degree program for students of our university and Chaoyang University of Technology was concluded in 2009.',
+      // Publications
+      '指導教員':
+        'Professors',
+      'ヴィタリー・クリューエフ 教授':
+        'Prof. Vitaly Klyuev',
+      'エフゲニー・ピシキン 教授':
+        'Prof. Evgeny Pyshkin',
+      'モハメド・ハマダ 教授':
+        'Prof. Mohamed Hamada',
+      '学生による論文':
+        'Publications by students',
     },
   },
 };
