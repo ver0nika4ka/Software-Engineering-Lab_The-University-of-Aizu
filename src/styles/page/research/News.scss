@@ -1,0 +1,66 @@
+@import "../../foundation/mixins.scss";
+@import "../../foundation/variable.scss";
+
+.News {
+  .moz-txt-link-freetext {
+    color: $link;
+    font-weight: bold;
+  }
+}
+
+.News_lists {
+  height: calc(100vh - 128px);
+  max-width: 30vw;
+  overflow: scroll;
+  padding: 8px 32px 8px 8px;
+  margin-right: 24px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.News_item {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  transition: all ease 300ms;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+
+  p {
+    margin: 16px 0;
+  }
+
+  &:hover {
+    background-color: $cultured;
+  }
+}
+
+.News_mailContents {
+  height: calc(100vh - 128px);
+  overflow: hidden;
+}
+
+.News_mailTitle {
+  padding: 0 0 16px 8px;
+}
+
+.News_mailBody {
+  max-height: 100vh;
+  box-sizing: border-box;
+  overflow: scroll;
+  background-color: $cultured;
+  padding: 24px;
+  border-radius: 16px;
+
+  > div {
+    overflow: scroll;
+  }
+
+  span {
+    padding: 0 16px;
+    width: 100%;
+    text-decoration: none;
+    line-height: 1.5;
+    font-size: 1.6rem;
+    word-break: break-all;
+  }
+}
