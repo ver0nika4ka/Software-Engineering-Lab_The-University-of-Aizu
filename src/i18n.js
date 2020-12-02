@@ -7,6 +7,7 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   ja: {
     translation: {
+      // App
       '研究': '研究',
       '研究室について': '研究室について',
       '卒業テーマ': '卒業テーマ',
@@ -26,6 +27,9 @@ const resources = {
       '大学へのアクセス': '大学へのアクセス',
       'アクセス統計': 'アクセス統計',
       '開発者': '開発者',
+      // Top
+      'ソフトウェア工学講座': 'ソフトウェア工学講座',
+      '訪問者数': '訪問者数',
     },
   },
   en: {
@@ -49,6 +53,9 @@ const resources = {
       '大学へのアクセス': 'Access',
       'アクセス統計': 'Statistics',
       '開発者': 'Developers',
+      // Top
+      'ソフトウェア工学講座': 'Software Engineering Lab',
+      '訪問者数': 'Number of visitors',
     },
   },
 };

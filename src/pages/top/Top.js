@@ -23,7 +23,7 @@ const Top = () => {
           <div className="home_logo">
             <img src={Logo}></img>
           </div>
-          <h1 className="home_title">ソフトウェア工学講座</h1>
+          <h1 className="home_title">{t('ソフトウェア工学講座')}</h1>
         </div>
 
         <div className="home_carousel">
@@ -35,7 +35,7 @@ const Top = () => {
         </div>
 
         <div className="home_footer flex center">
-          <p>Number of visitors: </p>
+          <p>{t('訪問者数')}: </p>
           <ScriptTag isHydrating={true} type="text/javascript" src="//counter.websiteout.net/js/18/0/7325/1" />
         </div>
       </div>
