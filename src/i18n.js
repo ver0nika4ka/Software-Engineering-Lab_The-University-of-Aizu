@@ -98,6 +98,37 @@ const resources = {
         '学習システムの研究は現代の科学者に需要の高い効率的な学習に重きをおいています。新しい人工知能を生かしたソフトウェアを利用する技術や方法論、または教育を補助するなど様々な可能性を秘めています。',
       'ソフトウェア工学研究室ではこれらの実験的な技術開発に力を入れ、研究室の学生を含めこれらのテーマに基づいて研究を行っています。':
         'ソフトウェア工学研究室ではこれらの実験的な技術開発に力を入れ、研究室の学生を含めこれらのテーマに基づいて研究を行っています。',
+      // GraduationResearchThemes
+      'クリューエフ研の研究内容':
+        'クリューエフ研の研究内容',
+      '知能システムの構築':
+        '知能システムの構築',
+      '実践的情報セキュリティ':
+        '実践的情報セキュリティ',
+      '情報セキュリティは、コンピュータセキュリティにおいて特にインターネットと関連した分野です。その目的は、インターネットに対する攻撃についての防御の手法やルールについての確立です。私たちの研究の目的は、インターネット対する様々な異なる攻撃手法やその防御方法について研究することです。':
+        '情報セキュリティは、コンピュータセキュリティにおいて特にインターネットと関連した分野です。その目的は、インターネットに対する攻撃についての防御の手法やルールについての確立です。私たちの研究の目的は、インターネット対する様々な異なる攻撃手法やその防御方法について研究することです。',
+      'ハマダ研の研究内容':
+        'ハマダ研の研究内容',
+      '提案されたプロジェクト':
+        '提案されたプロジェクト',
+      '知的双方向的マルチメディア学習フレームワーク':
+        '知的双方向的マルチメディア学習フレームワーク',
+      'スマートメディアシステムに基づいた推薦システム':
+        'スマートメディアシステムに基づいた推薦システム',
+      '最適学習フレームワーク':
+        '最適学習フレームワーク',
+      '知的双方向的マルチメディア学習フレームワーク':
+        '知的双方向的マルチメディア学習フレームワーク',
+      'このプロジェクトは主に3つに分けられます。':
+        'このプロジェクトは主に3つに分けられます。',
+      '人工知能を用いた顔認識システム':
+        '人工知能を用いた顔認識システム',
+      'マルチメディア学習モジュール':
+        'マルチメディア学習モジュール',
+      'モジュールの学習スタイル':
+        'モジュールの学習スタイル',
+      'スライドを入手する':
+        'スライドを入手する',
     },
   },
   en:
@@ -192,6 +223,37 @@ const resources = {
         'Learning technologies research aims at efficient learning which is highly demanded by modern societies. New technologies utilizing intelligent computer software, methodology, and experience of tutors may be very helpful in learning processes. Software Engineering Lab works on these technologies proposing prototypes of new systems.',
       'ソフトウェア工学研究室ではこれらの実験的な技術開発に力を入れ、研究室の学生を含めこれらのテーマに基づいて研究を行っています。':
         'These topics are under our investigation. Lab students are involved in this research.',
+      // GraduationResearchThemes
+      'クリューエフ研の研究内容':
+        'Prof. Klyuev: Research Directions',
+      '知能システムの構築':
+        'Intelligent systems',
+      '実践的情報セキュリティ':
+        'Practical Internet Security',
+      '情報セキュリティは、コンピュータセキュリティにおいて特にインターネットと関連した分野です。その目的は、インターネットに対する攻撃についての防御の手法やルールについての確立です。私たちの研究の目的は、インターネット対する様々な異なる攻撃手法やその防御方法について研究することです。':
+        'Internet security is a branch of computer security specifically related to the Internet. Its objective is to establish rules and measures to use against attacks over the Internet. The aim of this research is to study different types of security, ways to attack Internet gadgets, modern tools to use against attacks, etc.',
+      'ハマダ研の研究内容':
+        'Prof. Hamada: Research Directions',
+      '提案されたプロジェクト':
+        'Proposed projects',
+      '知的双方向的マルチメディア学習フレームワーク':
+        'Intelligent Interactive Multimadia Learnig Framework',
+      'スマートメディアシステムに基づいた推薦システム':
+        'A Smart media-based recommendation system',
+      '最適学習フレームワーク':
+        'Adaptive Learnig Framework',
+      '知的双方向的マルチメディア学習フレームワーク':
+        'Intelligent Interactive Multimadia Learning Framework',
+      'このプロジェクトは主に3つに分けられます。':
+        'The project will consists of 3 basic modules:',
+      '人工知能を用いた顔認識システム':
+        'Artificial Intelligence: Facial recognition',
+      'マルチメディア学習モジュール':
+        'Multimedia Learnig Module',
+      'モジュールの学習スタイル':
+        'Learnig Style Module',
+      'スライドを入手する':
+        'Chick here to get the slides',
     },
   },
 };

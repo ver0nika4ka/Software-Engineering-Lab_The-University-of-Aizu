@@ -1,0 +1,33 @@
+@import "../../foundation/mixins.scss";
+@import "../../foundation/variable.scss";
+
+.GraduationResearchThemes_content {
+  margin-bottom: 128px;
+
+  ul {
+    margin-bottom: 24px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+}
+
+.GraduationResearchThemes_contentFrame {
+  margin-bottom: 64px;
+}
+
+.GraduationResearchThemes_title {
+  margin-bottom: 40px;
+}
+
+.GraduationResearchThemes_subtitle {
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.GraduationResearchThemes_image {
+  display: block;
+  margin: auto auto 24px auto;
+  width: 80vw;
+}
