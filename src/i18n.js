@@ -179,6 +179,51 @@ const resources = {
         'モハメド・ハマダ 教授',
       '学生による論文':
         '学生による論文',
+      // ItSpecialistProgram
+      'Program for Leading Edge IT Specialists':
+        'Program for Leading Edge IT Specialists',
+      '2007年、Program for Leading Edge IT Specialistsに参加し、研究室の学生に対して、検索エンジンの一般的な目的のためのツールのまとめるように提案しました。学期ごとの教育や研究は私たちに取って新しいスタイルであり、最初のグループは日本人とロシア人で構成され、彼らは2009年秋にこのプログラムを成功させました。':
+        '2007年、Program for Leading Edge IT Specialistsに参加し、研究室の学生に対して、検索エンジンの一般的な目的のためのツールのまとめるように提案しました。学期ごとの教育や研究は私たちに取って新しいスタイルであり、最初のグループは日本人とロシア人で構成され、彼らは2009年秋にこのプログラムを成功させました。',
+      '修士論文口頭発表会':
+        '修士論文口頭発表会',
+      '教育方法の主な特徴':
+        '教育方法の主な特徴',
+      'プロジェクトは個人とグループワークの2種類ある。':
+        'プロジェクトは個人とグループワークの2種類ある。',
+      'それぞれのチームメンバーはトピック決定の責任がある。':
+        'それぞれのチームメンバーはトピック決定の責任がある。',
+      '週に一度、チームメンバーはそれぞれの担当分野の進捗状況について報告する。':
+        '週に一度、チームメンバーはそれぞれの担当分野の進捗状況について報告する。',
+      'プロジェクトマネージャーは交代制。それぞれのチームメンバーの役割は月ごとに変わる。':
+        'プロジェクトマネージャーは交代制。それぞれのチームメンバーの役割は月ごとに変わる。',
+      'ソフトウェアエンジニアは2人。彼らはプログラミングコードを書いたりソフトウェアに関連したことについての責任を持つ。':
+        'ソフトウェアエンジニアは2人。彼らはプログラミングコードを書いたりソフトウェアに関連したことについての責任を持つ。',
+      '残り一人はマネージャーになり、プロジェクトの進行具合などを管理する。':
+        '残り一人はマネージャーになり、プロジェクトの進行具合などを管理する。',
+      '月に一度、それぞれの役割は交代し、三ヶ月後には全てのメンバーが全ての役割を経験する。':
+        '月に一度、それぞれの役割は交代し、三ヶ月後には全てのメンバーが全ての役割を経験する。',
+      '特別活動の役割。私たちは3つのタイプの活動について開拓した。':
+        '特別活動の役割。私たちは3つのタイプの活動について開拓した。',
+      'お茶会。私たちのコンサルタント兼プロジェクトの評価担当者であるNygard教授とSifer教授とのミーティングをリラックスした環境でおこなった。':
+        'お茶会。私たちのコンサルタント兼プロジェクトの評価担当者であるNygard教授とSifer教授とのミーティングをリラックスした環境でおこなった。',
+      '国際学会への参加。全てのメンバーは海外で行われた国際学会にて口頭発表を行った。':
+        '国際学会への参加。全てのメンバーは海外で行われた国際学会にて口頭発表を行った。',
+      '週ごとのグループミーティング。議論中の積極的な批評。':
+        '週ごとのグループミーティング。議論中の積極的な批評。',
+      '私たちが考慮すべき課題':
+        '私たちが考慮すべき課題',
+      'それぞれのメンバーの今までの経歴':
+        'それぞれのメンバーの今までの経歴',
+      '研究者としての学生の育成':
+        '研究者としての学生の育成',
+      '評価':
+        '評価',
+      '自己組織化':
+        '自己組織化',
+      '就職活動':
+        '就職活動',
+      '2009年8月13日に行われた修士論文発表会にて、指導担当者による批評と共に完結した。発表資料については以下のリンクからダウンロードできます。':
+        '2009年8月13日に行われた修士論文発表会にて、指導担当者による批評と共に完結した。発表資料については以下のリンクからダウンロードできます。',
     },
   },
   en:
@@ -354,6 +399,51 @@ const resources = {
         'Prof. Mohamed Hamada',
       '学生による論文':
         'Publications by students',
+      // ItSpecialistProgram
+      'Program for Leading Edge IT Specialists':
+        'Program for Leading Edge IT Specialists',
+      '2007年、Program for Leading Edge IT Specialistsに参加し、研究室の学生に対して、検索エンジンの一般的な目的のためのツールのまとめるように提案しました。学期ごとの教育や研究は私たちに取って新しいスタイルであり、最初のグループは日本人とロシア人で構成され、彼らは2009年秋にこのプログラムを成功させました。':
+        'Software Engineering Lab joined the Program for Leading Edge IT Specialists organized by our university in 2007. We offered students a project on Summarizing Tools for General Purpose Search Engines. A team-based way of education and research is a new style of teaching for us. The first international group of students consisting of Japanese and Russian students successfully completed the program of the study in the autumn of 2009.',
+      '修士論文口頭発表会':
+        'Master Thesis Presentation',
+      '教育方法の主な特徴':
+        'Distinguished characteristics of the teaching:',
+      'プロジェクトは個人とグループワークの2種類ある。':
+        'The project combined individual and group work.',
+      'それぞれのチームメンバーはトピック決定の責任がある。':
+        'Each team member was responsible for a dedicated topic.',
+      '週に一度、チームメンバーはそれぞれの担当分野の進捗状況について報告する。':
+        'Once a week, each team member reported about his/her individual work and took part in discussions.',
+      'プロジェクトマネージャーは交代制。それぞれのチームメンバーの役割は月ごとに変わる。':
+        'Rotation of Project Manager Position. The role of each team member for each month:',
+      'ソフトウェアエンジニアは2人。彼らはプログラミングコードを書いたりソフトウェアに関連したことについての責任を持つ。':
+        'Two members were software engineers: They were responsible for coding and they prepared other materials related to software development.',
+      '残り一人はマネージャーになり、プロジェクトの進行具合などを管理する。':
+        'One team member was a manager: He was responsible for the management of the project.',
+      '月に一度、それぞれの役割は交代し、三ヶ月後には全てのメンバーが全ての役割を経験する。':
+        'Once a month, the functional roles were rotated, so once in three months, everyone was responsible for the management activity.',
+      '特別活動の役割。私たちは3つのタイプの活動について開拓した。':
+        'Role of the Special Activities. We pioneered in three types of activities.',
+      'お茶会。私たちのコンサルタント兼プロジェクトの評価担当者であるNygard教授とSifer教授とのミーティングをリラックスした環境でおこなった。':
+        'Tea seminars: Series of meetings with our consulters and evaluators (Prof. Kendall E. Nygard, USA and Prof. Mark Sifer, Australia) and with our partner team in the relaxing atmosphere.',
+      '国際学会への参加。全てのメンバーは海外で行われた国際学会にて口頭発表を行った。':
+        'Conference participation: Every member presented a talk at the international conference overseas.',
+      '週ごとのグループミーティング。議論中の積極的な批評。':
+        'Weekly group meetings: Strong internal criticism during discussions.',
+      '私たちが考慮すべき課題':
+        'Lessons Learned. The problems which should be taken into account our successors:',
+      'それぞれのメンバーの今までの経歴':
+        'Background of each member',
+      '研究者としての学生の育成':
+        'Development of the students as independent researchers',
+      '評価':
+        'Assessment',
+      '自己組織化':
+        'Self-organizing team',
+      '就職活動':
+        'Job hunting',
+      '2009年8月13日に行われた修士論文発表会にて、指導担当者による批評と共に完結した。発表資料については以下のリンクからダウンロードできます。':
+        'Concluding remarks by Coach on the day of Master Thesis Presentation, August 13, 2009. Download',
     },
   },
 };
