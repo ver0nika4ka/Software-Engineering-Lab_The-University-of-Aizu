@@ -224,6 +224,22 @@ const resources = {
         '就職活動',
       '2009年8月13日に行われた修士論文発表会にて、指導担当者による批評と共に完結した。発表資料については以下のリンクからダウンロードできます。':
         '2009年8月13日に行われた修士論文発表会にて、指導担当者による批評と共に完結した。発表資料については以下のリンクからダウンロードできます。',
+      // Members
+      '学生': '学生',
+      // Gaduated
+      '修士課程': '修士課程',
+      '学部': '学部',
+      // ProspectiveStudents
+      'ソフトウェア工学講座は、ソフトウェア工学に興味がある学生を募集しています!': 'ソフトウェア工学講座は、ソフトウェア工学に興味がある学生を募集しています!',
+      'やる気に満ち溢れている': 'やる気に満ち溢れている',
+      'ソフトウェアエンジニアになりたい': 'ソフトウェアエンジニアになりたい',
+      '自分の力を発揮したい': '自分の力を発揮したい',
+      '新しい事を発見したい': '新しい事を発見したい',
+      '学生は大歓迎です！': '学生は大歓迎です！',
+      '研究室のより詳細な情報は': '研究室のより詳細な情報は',
+      'ここ': 'ここ',
+      'をクリックしてください。': 'をクリックしてください。',
+      '*資料は英語のみです。': '*資料は英語のみです。',
     },
   },
   en:
@@ -444,6 +460,22 @@ const resources = {
         'Job hunting',
       '2009年8月13日に行われた修士論文発表会にて、指導担当者による批評と共に完結した。発表資料については以下のリンクからダウンロードできます。':
         'Concluding remarks by Coach on the day of Master Thesis Presentation, August 13, 2009. Download',
+      // Members
+      '学生': 'Students',
+      // Gaduated
+      '修士課程': 'Masters Degree',
+      '学部': 'Bachelors Degree',
+      // ProspectiveStudents
+      'ソフトウェア工学講座は、ソフトウェア工学に興味がある学生を募集しています!': 'Software Engineering Lab is looking for students who are interested in Software Engineering for Internet Applications.',
+      'やる気に満ち溢れている': 'If you are ambitious...',
+      'ソフトウェアエンジニアになりたい': 'If you would like to be a real software engineer...',
+      '自分の力を発揮したい': 'If you prefer to work hard...',
+      '新しい事を発見したい': 'If you are interested in discovering scientific world...',
+      '学生は大歓迎です！': 'You are welcome to join Software Enginering Lab!',
+      '研究室のより詳細な情報は': 'Click ',
+      'ここ': 'here ',
+      'をクリックしてください。': 'for more details!',
+      '*資料は英語のみです。': '',
     },
   },
 };
