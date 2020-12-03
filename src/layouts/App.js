@@ -127,7 +127,7 @@ export default function App() {
 
   return (
     <Router>
-      <div >
+      <div>
         <header className="header">
           <nav>
             <ul className="menu">
@@ -252,6 +252,10 @@ export default function App() {
             )
           })}
         </Switch>
+
+        <footer className="footer">
+          (c) 2015-2020 Software Engineering Lab, The University of Aizu
+        </footer>
       </div>
     </Router>
   );
