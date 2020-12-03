@@ -1,6 +1,5 @@
 
 import React from 'react';
-import Layout from '../../layouts/Layout'
 // i18n
 import { useTranslation } from 'react-i18next';
 // images
@@ -34,8 +33,8 @@ function Members() {
           <div className="Publications_professors flex center">
             {professors.map((professor, i) => (
               <div className="Publications_professor" key={i}>
-                <a href={professor.link} target="_blank" className="flex wrap">
-                  <img className="Publications_professorImage " src={professor.photo} />
+                <a href={professor.link} target="_blank" rel="noopener noreferrer" className="flex wrap">
+                  <img className="Publications_professorImage " src={professor.photo} alt="" />
                   <p className="Publications_professorName ">{t(professor.name)}</p>
                 </a>
               </div>

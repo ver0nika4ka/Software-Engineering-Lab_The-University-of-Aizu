@@ -1,12 +1,8 @@
 
 import React from 'react';
-import Layout from '../../layouts/Layout'
-// i18n
-import { useTranslation } from 'react-i18next';
 import Iframe from 'react-iframe'
-function Statistics() {
-  const [t, i18n] = useTranslation();
 
+function Statistics() {
   return (
     <div className="Statistics">
       <Iframe url="https://ga-api.herokuapp.com"

@@ -33,8 +33,8 @@ function Publications() {
         <div className="Publications_professors flex center">
           {professors.map((professor, i) => (
             <div className="Publications_professor" key={i}>
-              <a href={professor.link} target="_blank" className="flex wrap">
-                <img className="Publications_professorImage " src={professor.photo} />
+              <a href={professor.link} target="_blank" className="flex wrap" rel="noopener noreferrer" >
+                <img className="Publications_professorImage " src={professor.photo} alt="" />
                 <p className="Publications_professorName ">{t(professor.name)}</p>
               </a>
             </div>

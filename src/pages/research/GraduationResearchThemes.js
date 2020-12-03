@@ -56,7 +56,7 @@ function GraduationResearchThemes() {
           <img className="container_image" src={Themes4} alt=""></img>
         </div>
 
-        <a className="link" href="http://web-ext.u-aizu.ac.jp/labs/is-se/research/pdf/SoftwareEngineeringLab_LabIntroduction_2015_0402.pdf" target="_blank">{t('スライドを入手する')}</a>
+        <a className="link" href="http://web-ext.u-aizu.ac.jp/labs/is-se/research/pdf/SoftwareEngineeringLab_LabIntroduction_2015_0402.pdf" target="_blank" rel="noopener noreferrer">{t('スライドを入手する')}</a>
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 
 import React from 'react';
-import Layout from '../../layouts/Layout'
 // i18n
 import { useTranslation } from 'react-i18next';
 
@@ -9,8 +8,6 @@ function Developers() {
 
   return (
     <div className="Developers">
-
-
       <div className="container_content">
         <div className="container_contentFrame">
           <h2 className="container_title">{t('開発者')}</h2>
@@ -64,7 +61,6 @@ function Developers() {
             </tbody>
           </table>
         </div>
-
       </div>
     </div>
   );

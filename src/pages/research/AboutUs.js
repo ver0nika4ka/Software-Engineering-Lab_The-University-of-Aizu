@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../../layouts/Layout'
 // i18n
 import { useTranslation } from 'react-i18next';
 import About1 from '../../images/research/about_1.jpg'
@@ -17,7 +16,7 @@ function AboutUs() {
           <h3 className="container_subtitle">{t('イントロダクション')}</h3>
           <img className="container_image AboutUs_image" src={About1} alt=""></img>
           <p>{t('世界の牽引する各国はコンピュータ工学がグローバル社会において、私たちの暮らし発達に重要な影響があることを理解しています。また、これらの国はこれから迎えるまたは迎えつつある先進技術を育む上でコンピュータ工学は欠かすことができないと認識しています。日本政府も例外ではなく、コンピュータ工学の重要性に理解を進め、2004年10月に')}
-            <a className="link" href="https://www.ipa.go.jp/" target="_blank">{t('独立行政法人 情報処理推進機構')}</a>{t('を立ち上げています。')}
+            <a className="link" href="https://www.ipa.go.jp/" target="_blank" rel="noopener noreferrer">{t('独立行政法人 情報処理推進機構')}</a>{t('を立ち上げています。')}
           </p>
           <p>{t('機構の主な目的として企業、教育機関、また政府機関などの連携を強化し情報技術の先進化を図っています。会津大学のコンピュータ工学研究所もこれに伴い、学生に対し革新的なソフトウェア工学の技術や研究など積極的に推進しています。これからの未来を担う技術者をこの会津大学から輩出し、社会に価値のあるソフトウェアを提供しようと力を入れています。')}</p>
           <br clear="left" />

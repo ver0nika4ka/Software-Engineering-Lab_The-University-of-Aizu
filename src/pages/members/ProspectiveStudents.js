@@ -25,7 +25,7 @@ function ProspectiveStudents() {
             <div className="container_contentFrame">
               <h3 className="container_subtitle">{t('学生は大歓迎です！')}</h3>
               <p>{t('研究室のより詳細な情報は')}
-                <a className="link" href="http://web-ext.u-aizu.ac.jp/labs/is-se/members/pdf/ProspectiveStudents.pdf" target="_blank">
+                <a className="link" href="http://web-ext.u-aizu.ac.jp/labs/is-se/members/pdf/ProspectiveStudents.pdf" target="_blank" rel="noopener noreferrer" >
                   {t('ここ')}
                 </a>
                 {t('をクリックしてください。')}

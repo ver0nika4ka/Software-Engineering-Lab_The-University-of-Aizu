@@ -237,13 +237,15 @@ const resources = {
       'をクリックしてください。': 'をクリックしてください。',
       '*資料は英語のみです。': '*資料は英語のみです。',
       // Developers
-      '開発者': '開発者',
       'このウェブサイトの開発は修士の加藤さんと学部生の大塚さんにより2015年に始まりました。': 'このウェブサイトの開発は修士の加藤さんと学部生の大塚さんにより2015年に始まりました。',
       'ウェブサイトの設置以降、多くの学生がこの開発に携わっています。': 'ウェブサイトの設置以降、多くの学生がこの開発に携わっています。',
       '開発者一覧': '開発者一覧',
       '年': '年',
       '名前	': '名前',
       '開発内容': '開発内容',
+      // Achievements
+      '受賞': '受賞',
+      '研究業績': '研究業績',
     },
   },
   en:
@@ -477,13 +479,15 @@ const resources = {
       'をクリックしてください。': 'for more details!',
       '*資料は英語のみです。': '',
       // Developers
-      '開発者': 'Developers',
       'このウェブサイトの開発は修士の加藤さんと学部生の大塚さんにより2015年に始まりました。': 'This Lab Website development was an initiative project by Master Student Kato-san and Undergraduate Student Otsuka-san in 2015.',
       'ウェブサイトの設置以降、多くの学生がこの開発に携わっています。': 'After deployment of this Website, many students were involved to run it.',
       '開発者一覧': 'Chronology',
       '年': 'Year',
       '名前': 'Name',
       '開発内容': 'Contribution',
+      // Achievements
+      '受賞': 'Awards',
+      '研究業績': 'Scientific Achievements',
     },
   },
 };

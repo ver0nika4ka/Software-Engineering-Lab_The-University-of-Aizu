@@ -20,16 +20,16 @@ const Top = () => {
     <div className="top">
       <div className="home_header flex center">
         <div className="home_logo">
-          <img src={Logo}></img>
+          <img src={Logo} alt=""></img>
         </div>
         <h1 className="home_title">{t('ソフトウェア工学講座')}</h1>
       </div>
 
       <div className="home_carousel">
         <Carousel infiniteLoop autoPlay showStatus={false} showThumbs={false} stopOnHover>
-          <img src={Top1} />
-          <img src={Top2} />
-          <img src={Top3} />
+          <img src={Top1} alt="" />
+          <img src={Top2} alt="" />
+          <img src={Top3} alt="" />
         </Carousel>
       </div>
 
