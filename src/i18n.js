@@ -117,8 +117,6 @@ const resources = {
         'スマートメディアシステムに基づいた推薦システム',
       '最適学習フレームワーク':
         '最適学習フレームワーク',
-      '知的双方向的マルチメディア学習フレームワーク':
-        '知的双方向的マルチメディア学習フレームワーク',
       'このプロジェクトは主に3つに分けられます。':
         'このプロジェクトは主に3つに分けられます。',
       '人工知能を用いた顔認識システム':
@@ -130,8 +128,6 @@ const resources = {
       'スライドを入手する':
         'スライドを入手する',
       // InternationalRelations
-      '国際交流':
-        '国際交流',
       'ソフトウェア工学の研究室では多々の大学と協力のもと共同研究や教育にも力を入れています。':
         'ソフトウェア工学の研究室では多々の大学と協力のもと共同研究や教育にも力を入れています。',
       'サンクトペテルブルク国立大学（Saint-Petersburg State University）':
@@ -353,8 +349,6 @@ const resources = {
         'A Smart media-based recommendation system',
       '最適学習フレームワーク':
         'Adaptive Learnig Framework',
-      '知的双方向的マルチメディア学習フレームワーク':
-        'Intelligent Interactive Multimadia Learning Framework',
       'このプロジェクトは主に3つに分けられます。':
         'The project will consists of 3 basic modules:',
       '人工知能を用いた顔認識システム':
@@ -366,8 +360,6 @@ const resources = {
       'スライドを入手する':
         'Chick here to get the slides',
       // InternationalRelations
-      '国際交流':
-        'International Relations',
       'ソフトウェア工学の研究室では多々の大学と協力のもと共同研究や教育にも力を入れています。':
         'Software Engineering Lab is responsible for coordination joint research and education projects with partner universities: ',
       'サンクトペテルブルク国立大学（Saint-Petersburg State University）':
