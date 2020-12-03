@@ -8,6 +8,9 @@ import {
 import Layout from '../layouts/Layout'
 // i18n
 import { useTranslation } from 'react-i18next';
+// FontAwesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faSortDown } from '@fortawesome/free-solid-svg-icons'
 // top
 import Top from "../pages/top/Top"
 // research
@@ -33,19 +36,23 @@ import Developers from "../pages/others/Developers"
 // styles
 import '../styles/layout/App.scss';
 
-export default function App() {
+const App = () => {
   const [openMenuItem, setOpenMenuItem] = useState([false, false, false, false]);
   const changeOpenMenuItem = i => {
     const newOpenMenuItem = [false, false, false, false]
     newOpenMenuItem[i] = !openMenuItem[i]
     setOpenMenuItem(newOpenMenuItem)
   }
+  const resetOpenMenuItem = () => setOpenMenuItem([false, false, false, false])
 
   const [t, i18n] = useTranslation();
   const [lang, setLang] = useState('ja');
   useEffect(() => {
     i18n.changeLanguage(lang);
   }, [lang, i18n]);
+
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const closeMenu = () => setIsOpenMenu(false)
 
   const components = [
     {
@@ -125,106 +132,138 @@ export default function App() {
     },
   ]
 
+  // メニューアイテムの切り替え
+  const [selectedItem, setSelectedItem] = useState(null);
+  const selectMenuItem = (itemName) => {
+    // 選択中のアイテムが切り替わった場合
+    if (selectedItem !== itemName) {
+      resetOpenMenuItem()
+      setSelectedItem(itemName)
+    }
+  }
+
   return (
     <Router>
       <div>
-        <header className="header">
+        <header className={`header ${isOpenMenu ? "open" : ""}`}>
           <nav>
             <ul className="menu">
-              <li className="menu_item">
-                <Link to="/top">{t('Top')}</Link>
+              <li className={`menu_item ${selectedItem === 'Top' ? 'active' : ''}`}>
+                <Link to="/top"
+                  onClick={() => { selectMenuItem('Top') }}
+                >{t('Top')}</Link>
               </li>
 
-              <li className="menu_item noLink"
-                onClick={() => changeOpenMenuItem(0)}>
-                <a >{t('研究')}</a>
+              <li className={`menu_item noLink ${selectedItem === '研究' ? 'active' : ''}`}
+                onClick={() => changeOpenMenuItem(0)}
+              >
+                <a
+                  onClick={() => { selectMenuItem('研究') }}
+                // onMouseLeave={(e) => { selectMenuItem(e) }}
+                >
+                  {t('研究')}
+                  <FontAwesomeIcon icon={faSortDown} />
+                </a>
                 {openMenuItem[0] &&
                   <ul className="menu_list">
                     <li className="menu_item">
-                      <Link to="/research/about_us">{t('研究室について')}</Link>
+                      <Link to="/research/about_us" onClick={closeMenu}>{t('研究室について')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/research/graduation_research_themes">{t('卒業テーマ')}</Link>
+                      <Link to="/research/graduation_research_themes" onClick={closeMenu}>{t('卒業テーマ')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/research/international_relations">{t('国際交流')}</Link>
+                      <Link to="/research/international_relations" onClick={closeMenu}>{t('国際交流')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/research/news">{t('ニュース')}</Link>
+                      <Link to="/research/news" onClick={closeMenu}>{t('ニュース')}</Link>
                     </li>
                   </ul>
                 }
               </li>
 
 
-              <li className="menu_item">
-                <Link to="/publication_list">{t('論文集')}</Link>
+              <li className={`menu_item ${selectedItem === '論文集' ? 'active' : ''}`}>
+                <Link to="/publication_list"
+                  onClick={() => {
+                    selectMenuItem('論文集')
+                    closeMenu()
+                  }}
+                >{t('論文集')}</Link>
               </li>
 
-              <li className="menu_item noLink"
+              <li className={`menu_item noLink ${selectedItem === '教育' ? 'active' : ''}`}
                 onClick={() => changeOpenMenuItem(1)}>
-                <a >{t('教育')}</a>
+                <a
+                  onClick={() => { selectMenuItem('教育') }}
+                >{t('教育')}<FontAwesomeIcon icon={faSortDown} /></a>
                 {openMenuItem[1] &&
                   <ul className="menu_list">
                     <li className="menu_item">
-                      <Link to="/it_specialist_program">{t('ITスペシャリストプログラム')}</Link>
+                      <Link to="/it_specialist_program" onClick={closeMenu}>{t('ITスペシャリストプログラム')}</Link>
                     </li>
                   </ul>
                 }
               </li>
 
-              <li className="menu_item noLink"
+              <li className={`menu_item noLink ${selectedItem === 'メンバー' ? 'active' : ''}`}
                 onClick={() => changeOpenMenuItem(2)}>
-                <a >{t('メンバー')}</a>
+                <a
+                  onClick={() => { selectMenuItem('メンバー') }}
+                >{t('メンバー')}<FontAwesomeIcon icon={faSortDown} /></a>
                 {openMenuItem[2] &&
                   <ul className="menu_list">
                     <li className="menu_item">
-                      <Link to="/members/member">{t('メンバー')}</Link>
+                      <Link to="/members/member" onClick={closeMenu}>{t('メンバー')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/members/gaduated">{t('卒業生')}</Link>
+                      <Link to="/members/gaduated" onClick={closeMenu}>{t('卒業生')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/members/prospective_students">{t('学生募集')}</Link>
+                      <Link to="/members/prospective_students" onClick={closeMenu}>{t('学生募集')}</Link>
                     </li>
                   </ul>
                 }
               </li>
 
-              <li className="menu_item noLink"
+              <li className={`menu_item noLink ${selectedItem === '業績' ? 'active' : ''}`}
                 onClick={() => changeOpenMenuItem(3)}>
-                <a >{t('業績')}</a>
+                <a
+                  onClick={() => { selectMenuItem('業績') }}
+                >{t('業績')}<FontAwesomeIcon icon={faSortDown} /></a>
                 {openMenuItem[3] &&
                   <ul className="menu_list">
                     <li className="menu_item">
-                      <Link to="/achievements/achievements">{t('業績')}</Link>
+                      <Link to="/achievements/achievements" onClick={closeMenu}>{t('業績')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/achievements/conferences_and_workshops">{t('国際学会')}</Link>
+                      <Link to="/achievements/conferences_and_workshops" onClick={closeMenu}>{t('国際学会')}</Link>
                     </li>
                   </ul>
                 }
               </li>
 
-              <li className="menu_item noLink"
+              <li className={`menu_item noLink ${selectedItem === 'その他' ? 'active' : ''}`}
                 onClick={() => changeOpenMenuItem(4)}>
-                <a >{t('その他')}</a>
+                <a
+                  onClick={() => { selectMenuItem('その他') }}
+                >{t('その他')}<FontAwesomeIcon icon={faSortDown} /></a>
                 {openMenuItem[4] &&
                   <ul className="menu_list">
                     <li className="menu_item">
-                      <Link to="/others/internationl_conferences">{t('ギャラリー')}</Link>
+                      <Link to="/others/internationl_conferences" onClick={closeMenu}>{t('ギャラリー')}</Link>
                     </li>
                     <li className="menu_item">
-                      <a href="https://www.u-aizu.ac.jp/" target="_blank" rel="noopener noreferrer">{t('会津大学')}</a>
+                      <a href="https://www.u-aizu.ac.jp/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>{t('会津大学')}</a>
                     </li>
                     <li className="menu_item">
-                      <a href="https://www.u-aizu.ac.jp/access/" target="_blank" rel="noopener noreferrer">{t('大学へのアクセス')}</a>
+                      <a href="https://www.u-aizu.ac.jp/access/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>{t('大学へのアクセス')}</a>
                     </li>
                     <li className="menu_item">
-                      <Link to="/others/statistics">{t('アクセス統計')}</Link>
+                      <Link to="/others/statistics" onClick={closeMenu}>{t('アクセス統計')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/others/developers">{t('開発者')}</Link>
+                      <Link to="/others/developers" onClick={closeMenu}>{t('開発者')}</Link>
                     </li>
                   </ul>
                 }
@@ -239,6 +278,13 @@ export default function App() {
                 }}>{lang === "ja" ? "English" : "日本語"}</button>
             </div>
           </nav>
+
+          <div className="hamburger"
+            onClick={() => {
+              setIsOpenMenu(!isOpenMenu)
+            }}>
+            <FontAwesomeIcon icon={faBars} />
+          </div>
         </header>
 
         <Switch>
@@ -260,3 +306,5 @@ export default function App() {
     </Router>
   );
 }
+
+export default App
