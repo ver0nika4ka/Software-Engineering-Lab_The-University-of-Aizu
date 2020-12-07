@@ -4,13 +4,13 @@ import SEO from 'react-seo-component'
 import { siteName, description } from '../siteconfig.json'
 import "../styles/layout/Layout.scss"
 
-export default function App({ title, path, children }) {
+const Layout = ({ title, path, children }) => {
   return (
     <>
       <SEO
-        title={title}
-        titleTemplate={siteName}
-        titleSeparator={`|`}
+        title={title === '' ? siteName : title}
+        titleTemplate={title === '' ? '' : siteName}
+        titleSeparator={title === '' ? ' ' : '|'}
         description={description || 'nothin’'}
         pathname={path}
       />
@@ -20,3 +20,5 @@ export default function App({ title, path, children }) {
     </>
   )
 }
+
+export default Layout

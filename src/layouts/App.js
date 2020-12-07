@@ -56,11 +56,6 @@ const App = () => {
 
   const components = [
     {
-      title: null,
-      component: Top,
-      path: "/top",
-    },
-    {
       title: '研究室について',
       component: AboutUs,
       path: "/research/about_us",
@@ -149,7 +144,7 @@ const App = () => {
           <nav>
             <ul className="menu">
               <li className={`menu_item ${selectedItem === 'Top' ? 'active' : ''}`}>
-                <Link to="/top"
+                <Link to="/"
                   onClick={() => { selectMenuItem('Top') }}
                 >{t('Top')}</Link>
               </li>
@@ -288,6 +283,11 @@ const App = () => {
         </header>
 
         <Switch>
+          <Route exact path='/'>
+            <Layout title='' path={'/'}>
+              <Top />
+            </Layout>
+          </Route>
           {components.map((component, i) => {
             return (
               <Route key={i} path={component.path}>
