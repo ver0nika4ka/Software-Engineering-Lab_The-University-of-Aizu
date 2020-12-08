@@ -1,0 +1,40 @@
+@import "../foundation/mixins.scss";
+@import "../foundation/variable.scss";
+
+.Professors {
+  @include max-screen($breakpoint-tablet) {
+    flex-direction: column;
+  }
+}
+
+.professor {
+  padding: 16px;
+
+  @include max-screen($breakpoint-tablet) {
+    &,
+    a {
+      flex-direction: column;
+    }
+  }
+}
+
+.professorImage {
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  margin: auto;
+  overflow: hidden;
+  background-color: #f8f6ed;
+
+  img {
+    height: 160px;
+    margin: auto;
+  }
+}
+
+.professorName {
+  text-align: center;
+  margin: auto;
+  padding: 16px 0;
+  font-weight: bold;
+}
