@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 // i18n
@@ -41,8 +40,8 @@ function Members() {
           <Professors />
         </div>
 
+        <h2 className="container_title">{t('学生')}</h2>
         <div className="container_contentFrame">
-          <h2 className="container_title">{t('学生')}</h2>
           <h4 className="container_subtitle">{t('修士課程')}</h4>
           <div className="membersListWrapper">
             <div className="membersList flex wrap">
@@ -63,7 +62,6 @@ function Members() {
         </div>
 
         <div className="container_contentFrame">
-          <h2 className="container_title">{t('学生')}</h2>
           <h4 className="container_subtitle">{t('学部生')}</h4>
           <div className="membersListWrapper">
 
