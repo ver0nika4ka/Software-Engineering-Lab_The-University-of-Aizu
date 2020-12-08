@@ -129,8 +129,14 @@ table {
     margin-bottom: 16px;
   }
 
-  a{
+  a {
     color: $link;
+  }
+
+  img {
+    width: 400px;
+    max-width: 100%;
+    margin: 16px auto;
   }
 }
 // end of airticle
