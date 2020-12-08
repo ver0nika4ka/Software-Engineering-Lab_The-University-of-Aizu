@@ -14,9 +14,20 @@ body {
   font-size: 1.6rem;
 }
 
-a {
-  line-height: 1.5;
+h1,
+h2,
+h3,
+h4,
+h5 a,
+p,
+li,
+th,
+td {
   color: $jet;
+  line-height: 1.5;
+}
+
+a {
   text-decoration: none;
 
   a:visited {
@@ -31,16 +42,14 @@ a.link {
 
 p {
   font-size: 1.6rem !important;
-  line-height: 1.5;
   margin-bottom: 24px;
 }
 
 li {
-  line-height: 1.5;
   word-break: break-all;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
