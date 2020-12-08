@@ -152,7 +152,10 @@ const App = () => {
             <ul className="menu">
               <li className={`menu_item ${selectedItem === 'Top' ? 'active' : ''}`}>
                 <Link to="/"
-                  onClick={() => { selectMenuItem('Top') }}
+                  onClick={() => {
+                    selectMenuItem('Top')
+                    closeMenu()
+                  }}
                 >{t('Top')}</Link>
               </li>
 
