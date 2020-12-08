@@ -1,0 +1,65 @@
+@import "../../foundation/mixins.scss";
+@import "../../foundation/variable.scss";
+
+.membersListWrapper {
+  max-width: 960px;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.membersList {
+  width: 960px;
+  margin: auto;
+  box-sizing: border-box;
+
+  @include max-screen($breakpoint-pc) {
+    width: 704px;
+  }
+
+  @include max-screen($breakpoint-tablet) {
+    width: 416px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    width: auto;
+  }
+}
+
+.member {
+  padding: 16px;
+  width: 240px;
+  box-sizing: border-box;
+
+  @include max-screen($breakpoint-pc) {
+    width: 234px;
+  }
+
+  @include max-screen($breakpoint-tablet) {
+    width: 208px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+  }
+}
+
+.memberImage {
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  margin: auto;
+  overflow: hidden;
+  background-color: #f8f6ed;
+
+  img {
+    height: 160px;
+    margin: auto;
+  }
+}
+
+.memberName {
+  text-align: center;
+  margin: 0;
+  padding: 16px 0 0 0;
+  font-weight: bold;
+}

@@ -3,7 +3,7 @@ import axios from 'axios'
 // i18n
 import { useTranslation } from 'react-i18next';
 // styles
-import "../styles/component/Professors.scss"
+import "../styles/page/members/Members.scss"
 
 function Professors() {
   const [t, i18n] = useTranslation();
@@ -19,7 +19,7 @@ function Professors() {
     // get request
     axios.get(`${baseUrl}`, { headers: config })
       .then(response => {
-        console.log(response.data.contents);
+        // console.log(response.data.contents);
         setProfessors(response.data.contents)
       })
       .catch(error => {
@@ -28,19 +28,21 @@ function Professors() {
   }, []);
 
   return (
-    <div className="Professors flex center">
-      {professors &&
-        professors.map((professor, i) => (
-          <div className="professor" key={i}>
-            <a href={professor.link} target="_blank" className="flex wrap" rel="noopener noreferrer" >
-              <div className="professorImage flex">
-                <img src={professor.image.url} alt="" />
-              </div>
-              <p className="professorName ">{i18n.language === 'ja' ? professor.name_ja : professor.name_en}</p>
-            </a>
-          </div>
-        ))
-      }
+    <div className="membersListWrapper flex">
+      <div className="Professors membersList flex wrap">
+        {professors &&
+          professors.map((member, i) => (
+            <div className="member" key={i}>
+              <a href={member.link} target="_blank" className="flex column" rel="noopener noreferrer" >
+                <div className="memberImage flex">
+                  <img src={member.image.url} alt="" />
+                </div>
+                <p className="memberName ">{i18n.language === 'ja' ? member.name_ja : member.name_en}</p>
+              </a>
+            </div>
+          ))
+        }
+      </div>
     </div>
   );
 }
