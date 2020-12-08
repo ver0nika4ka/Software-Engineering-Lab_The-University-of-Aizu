@@ -246,6 +246,12 @@ const resources = {
       // Achievements
       '受賞': '受賞',
       '研究業績': '研究業績',
+      // NotFoundPage
+      '該当するページは削除あるいは変更になりました。': '該当するページは削除あるいは変更になりました。',
+      '「トップページ」からあらためてリンクを辿って下さい。': '「トップページ」からあらためてリンクを辿って下さい。',
+      'また、対象ページのブックマークの変更も併せてお願い致します。': 'また、対象ページのブックマークの変更も併せてお願い致します。',
+      '会津大学公式ホームページでリンク切れ等によりリンクがたどれない場合は、 お手数ですが': '会津大学公式ホームページでリンク切れ等によりリンクがたどれない場合は、 お手数ですが',
+      'まで連絡下さいますようお願い致します。': 'まで連絡下さいますようお願い致します。',
     },
   },
   en:
@@ -488,6 +494,12 @@ const resources = {
       // Achievements
       '受賞': 'Awards',
       '研究業績': 'Scientific Achievements',
+      // NotFoundPage
+      '該当するページは削除あるいは変更になりました。': 'This page has been removed or moved.',
+      '「トップページ」からあらためてリンクを辿って下さい。': 'Follow links from the top page.',
+      'また、対象ページのブックマークの変更も併せてお願い致します。': 'Also, please change the bookmark of the target page.',
+      '会津大学公式ホームページでリンク切れ等によりリンクがたどれない場合は、 お手数ですが': 'If you cannot find the link on the official website of the University of Aizu due to broken links, please contact us at ',
+      'まで連絡下さいますようお願い致します。': '.',
     },
   },
 };

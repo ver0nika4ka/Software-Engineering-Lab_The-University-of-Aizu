@@ -33,6 +33,8 @@ import ConferencesAndWorkshops from "../pages/achievements/ConferencesAndWorksho
 import InternationlConferences from "../pages/others/InternationlConferences"
 import Statistics from "../pages/others/Statistics"
 import Developers from "../pages/others/Developers"
+// not_found_page
+import NotFoundPage from "../pages/not_found_page/NotFoundPage"
 // styles
 import '../styles/layout/App.scss';
 
@@ -124,6 +126,11 @@ const App = () => {
       title: '開発者',
       component: Developers,
       path: "/others/developers",
+    },
+    {
+      title: '404',
+      component: NotFoundPage,
+      path: "*",
     },
   ]
 
