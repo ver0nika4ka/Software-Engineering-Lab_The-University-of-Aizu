@@ -30,7 +30,7 @@ import ProspectiveStudents from "../pages/members/ProspectiveStudents"
 import Achievements from "../pages/achievements/Achievements"
 import ConferencesAndWorkshops from "../pages/achievements/ConferencesAndWorkshops"
 // others
-import InternationlConferences from "../pages/others/InternationlConferences"
+import Gallery from "../pages/others/Gallery"
 import Statistics from "../pages/others/Statistics"
 import Developers from "../pages/others/Developers"
 // not_found_page
@@ -114,8 +114,8 @@ const App = () => {
     },
     {
       title: 'ギャラリー',
-      component: InternationlConferences,
-      path: "/others/internationl_conferences",
+      component: Gallery,
+      path: "/others/gallery",
     },
     {
       title: 'アクセス統計',
@@ -256,7 +256,7 @@ const App = () => {
                 {openMenuItem[4] &&
                   <ul className="menu_list">
                     <li className="menu_item">
-                      <Link to="/others/internationl_conferences" onClick={closeMenu}>{t('ギャラリー')}</Link>
+                      <Link to="/others/gallery" onClick={closeMenu}>{t('ギャラリー')}</Link>
                     </li>
                     <li className="menu_item">
                       <a href="https://www.u-aizu.ac.jp/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>{t('会津大学')}</a>

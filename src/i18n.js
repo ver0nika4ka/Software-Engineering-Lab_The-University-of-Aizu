@@ -252,6 +252,9 @@ const resources = {
       'また、対象ページのブックマークの変更も併せてお願い致します。': 'また、対象ページのブックマークの変更も併せてお願い致します。',
       '会津大学公式ホームページでリンク切れ等によりリンクがたどれない場合は、 お手数ですが': '会津大学公式ホームページでリンク切れ等によりリンクがたどれない場合は、 お手数ですが',
       'まで連絡下さいますようお願い致します。': 'まで連絡下さいますようお願い致します。',
+      // Gallery
+      'オープンキャンパス': 'オープンキャンパス',
+      '卒業式': '卒業式'
     },
   },
   en:
@@ -500,6 +503,9 @@ const resources = {
       'また、対象ページのブックマークの変更も併せてお願い致します。': 'Also, please change the bookmark of the target page.',
       '会津大学公式ホームページでリンク切れ等によりリンクがたどれない場合は、 お手数ですが': 'If you cannot find the link on the official website of the University of Aizu due to broken links, please contact us at ',
       'まで連絡下さいますようお願い致します。': '.',
+      // Gallery
+      'オープンキャンパス': 'Open Campus',
+      '卒業式': 'Graduation'
     },
   },
 };
