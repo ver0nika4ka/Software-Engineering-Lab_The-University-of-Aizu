@@ -1,12 +1,14 @@
 import React from 'react';
 // i18n
 import { useTranslation } from 'react-i18next';
+// components
+import NumberOfVisitors from './ NumberOfVisitors'
 // images
 import Logo from '../../images/top/aizu_logo.gif'
 import Top1 from '../../images/top/top_1.jpg'
 import Top2 from '../../images/top/top_2.jpg'
 import Top3 from '../../images/top/top_3.jpg'
-import ScriptTag from 'react-script-tag';
+// import ScriptTag from 'react-script-tag';
 // Carousel
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -34,8 +36,9 @@ const Top = () => {
       </div>
 
       <div className="home_footer flex center">
-        <p>{t('訪問者数')}: </p>
-        <ScriptTag isHydrating={true} type="text/javascript" src="//counter.websiteout.net/js/18/0/7325/1" />
+        <p className="counter">{t('訪問者数')}: </p>
+        <NumberOfVisitors />
+        {/* <ScriptTag isHydrating={true} type="text/javascript" src="//counter.websiteout.net/js/18/0/7325/1" /> */}
       </div>
     </div>
   );
