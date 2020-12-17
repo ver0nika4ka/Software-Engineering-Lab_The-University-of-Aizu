@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "software-engineering-lab-uoa",
+    "public": "./docs",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
