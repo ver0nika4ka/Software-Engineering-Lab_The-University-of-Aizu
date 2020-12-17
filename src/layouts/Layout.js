@@ -4,7 +4,7 @@ import SEO from 'react-seo-component'
 import { siteName, description } from '../siteconfig.json'
 import "../styles/layout/Layout.scss"
 
-const Layout = ({ title, path, children }) => {
+const Layout = ({ title, path, fillWidth, children }) => {
   return (
     <>
       <SEO
@@ -14,7 +14,7 @@ const Layout = ({ title, path, children }) => {
         description={description || 'nothin’'}
         pathname={path}
       />
-      <div className="container">
+      <div className={`container ${fillWidth ? "fillWidth" : ""}`}>
         {children}
       </div>
     </>

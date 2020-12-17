@@ -2,6 +2,10 @@
 @import "../../foundation/variable.scss";
 
 .News {
+  width: 100vw;
+  padding: 0 32px;
+  box-sizing: border-box;
+
   .moz-txt-link-freetext {
     color: $link;
     font-weight: bold;
@@ -45,7 +49,7 @@
   overflow: hidden;
 
   @include max-screen($breakpoint-tablet) {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -80,11 +84,12 @@
 }
 
 .News_mailBody {
+  width: 60vw;
   max-height: 100vh;
   box-sizing: border-box;
   overflow: scroll;
   background-color: $cultured;
-  padding: 24px;
+  padding: 40px;
   border-radius: 16px;
   z-index: 15;
 
@@ -93,6 +98,7 @@
   }
 
   span {
+    white-space: normal !important;
     padding: 0 16px;
     width: 100%;
     text-decoration: none;
@@ -103,7 +109,7 @@
 
   @include max-screen($breakpoint-tablet) {
     max-height: 70vh;
-    width: 80vw;
+    width: 90vw;
     margin: 0 auto auto auto;
   }
 }

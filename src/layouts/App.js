@@ -76,6 +76,7 @@ const App = () => {
       title: 'ニュース',
       component: News,
       path: "/research/news",
+      fillWidth: true
     },
     {
       title: '論文集',
@@ -301,7 +302,7 @@ const App = () => {
           {components.map((component, i) => {
             return (
               <Route key={i} path={component.path}>
-                <Layout title={t(component.title)} path={component.path}>
+                <Layout title={t(component.title)} path={component.path} fillWidth={component.fillWidth}>
                   <component.component />
                 </Layout>
               </Route>
