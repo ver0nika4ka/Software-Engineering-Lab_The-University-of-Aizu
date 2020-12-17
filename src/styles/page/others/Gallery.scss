@@ -3,23 +3,31 @@
 
 .Gallery {
   .container {
-    margin: 32px 0;
+    margin: 0 0 64px 0;
   }
 }
 
 .Gallerytitle {
   margin: auto 0;
   padding: 24px 0;
+
+  @include max-screen($breakpoint-tablet) {
+    padding: 0;
+  }
 }
 
 .GalleryMenu {
   margin: auto 0;
 
+  @include max-screen($breakpoint-tablet) {
+    margin-bottom: 24px;
+  }
+
   a {
     font-size: 1.8rem;
     font-weight: bold;
     padding: 4px;
-    margin: auto 4px;
+    margin: 4px;
     color: $dimGray;
     cursor: pointer;
     transition: all ease 300ms;
@@ -32,16 +40,43 @@
     }
   }
 }
+.galleryItems {
+  margin: auto;
+
+  @include max-screen($breakpoint-pc) {
+    width: 704px;
+  }
+
+  @include max-screen($breakpoint-tablet) {
+    width: 416px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    width: auto;
+  }
+}
 
 .galleryItem {
-  height: 126px;
-  width: 224px;
+  height: 150.75px;
+  width: 268px;
   background-size: cover;
   background-position: center;
   border: 16px solid $white;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
   margin: 10px;
   cursor: pointer;
+
+  @include max-screen($breakpoint-pc) {
+    width: 182.6666px;
+  }
+
+  @include max-screen($breakpoint-tablet) {
+    width: 156px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+  }
 }
 
 .galleryItemInfo {
@@ -71,11 +106,34 @@
   }
 }
 
-.galleryImages {
+.galleryItemContents_header {
+  background-color: $cultured;
+  border-top: 1px solid $platinum;
+  border-bottom: 1px solid $platinum;
+  padding: 8px;
+  margin-bottom: 24px;
+
+  .galleryItemContents_backButton {
+    border-radius: 100%;
+    border: 1px solid $lightGray;
+    background-color: $lightGray;
+    font-weight: bold;
+    color: $daysGray;
+    width: 40px;
+    height: 40px;
+    transition: all ease 300ms;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.galleryItemContents {
   img {
-    width: auto;
-    height: 126px;
-    margin: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
     cursor: pointer;
   }
 }
@@ -89,7 +147,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 10000;
   }
 
@@ -97,8 +155,9 @@
     max-width: 80vw;
     max-height: 80vh;
     position: absolute;
-    top: 10vh;
-    left: 10vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 20000;
   }
 }

@@ -79,7 +79,7 @@ function Gallery() {
     <div className="Gallery">
       <div className="menu flex space-between">
         <h2 className="Gallerytitle">{t('ギャラリー')}</h2>
-        <div className="GalleryMenu">
+        <div className="GalleryMenu flex wrap">
           {galleries.map((g, i) => (
             <a key={i} onClick={() => {
               setSelectGallery(i)

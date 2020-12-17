@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 // i18n
 import { useTranslation } from 'react-i18next';
 // styles
@@ -24,27 +25,30 @@ function GalleryImages({ galleryName, galleryImages }) {
 
   return (
     <div className="GalleryImages">
-      <div className="galleryItems flex wrap">
+      <div className="GalleryImagesWrapper">
+
         {openItem === null &&
-          galleryImages.map((g, i) => (
-            <div key={i} className="galleryItem"
-              style={{ backgroundImage: `url(${require(`../../images/gallery/${g.name}/1.jpg`)})` }}
-              onClick={() => changeOpenItem(i)}>
-              <div className="galleryItemInfo">
-                <p className="galleryItemInfo_name"> {g.name}</p>
-                <p className="galleryItemInfo_imageNum"> {g.imageNum}</p>
+          <div className="galleryItems flex wrap">
+            {galleryImages.map((g, i) => (
+              <div key={i} className="galleryItem"
+                style={{ backgroundImage: `url(${require(`../../images/gallery/${g.name}/1.jpg`)})` }}
+                onClick={() => changeOpenItem(i)}>
+                <div className="galleryItemInfo">
+                  <p className="galleryItemInfo_name"> {g.name}</p>
+                  <p className="galleryItemInfo_imageNum"> {g.imageNum}</p>
+                </div>
               </div>
-            </div>
-          ))
+            ))}
+          </div>
         }
 
         {openItem !== null && galleryImages[openItem] &&
-          <div>
-            <div className="flex">
-              <h4>{t(galleryName)} {'>'} {galleryImages[openItem].name}</h4>
-              <button onClick={() => {
+          <div className="galleryItemContents">
+            <div className="galleryItemContents_header flex space-between">
+              <h4 className="galleryItemContents_title">{t(galleryName)} {'>'} {galleryImages[openItem].name}</h4>
+              <button className="galleryItemContents_backButton" onClick={() => {
                 setOpenItem(null)
-              }}>back</button>
+              }}>{'<'}</button>
             </div>
             {(() => {
               const items = [];
@@ -55,7 +59,15 @@ function GalleryImages({ galleryName, galleryImages }) {
                     window.scrollTo(0, 0)
                   }} />)
               }
-              return <div className="galleryImages flex wrap">{items}</div>;
+              return (
+                <div className="galleryImages">
+                  <ResponsiveMasonry columnsCountBreakPoints={{ 300: 2, 400: 3, 500: 4, 700: 5 }}>
+                    <Masonry>
+                      {items}
+                    </Masonry>
+                  </ResponsiveMasonry>
+                </div>
+              )
             })()}
           </div>
         }
@@ -69,6 +81,7 @@ function GalleryImages({ galleryName, galleryImages }) {
             <img src={require(`../../images/gallery/${modalImage.name}/Original/${modalImage.num}.jpg`)}></img>
           </div>
         }
+
       </div>
     </div>
   );
