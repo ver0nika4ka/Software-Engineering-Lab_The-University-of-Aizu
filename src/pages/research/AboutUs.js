@@ -1,7 +1,7 @@
 import React from 'react';
 // i18n
 import { useTranslation } from 'react-i18next';
-// import About1 from '../../images/research/about_1.jpg'
+import About1 from '../../images/research/about_1.jpg'
 import "../../styles/page/research/AboutUs.scss"
 
 function AboutUs() {
@@ -14,7 +14,7 @@ function AboutUs() {
 
         <div className="container_contentFrame">
           <h3 className="container_subtitle">{t('イントロダクション')}</h3>
-          <img className="container_image AboutUs_image" src={require('../../images/research/about_1.jpg')} alt=""></img>
+          <img className="container_image AboutUs_image" src={About1} alt=""></img>
           <p>{t('世界の牽引する各国はコンピュータ工学がグローバル社会において、私たちの暮らし発達に重要な影響があることを理解しています。また、これらの国はこれから迎えるまたは迎えつつある先進技術を育む上でコンピュータ工学は欠かすことができないと認識しています。日本政府も例外ではなく、コンピュータ工学の重要性に理解を進め、2004年10月に')}
             <a className="link" href="https://www.ipa.go.jp/" target="_blank" rel="noopener noreferrer">{t('独立行政法人 情報処理推進機構')}</a>{t('を立ち上げています。')}
           </p>
