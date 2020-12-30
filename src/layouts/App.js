@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from "react-router-dom";
 import Layout from '../layouts/Layout'
 // i18n
@@ -294,6 +295,7 @@ const App = () => {
         </header>
 
         <Switch>
+          <Redirect to="/" path='/~s1250090'></Redirect>
           <Route exact path='/'>
             <Layout title='' path={'/'}>
               <Top />
