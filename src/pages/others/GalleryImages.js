@@ -29,16 +29,24 @@ function GalleryImages({ galleryName, galleryImages }) {
 
         {openItem === null &&
           <div className="galleryItems flex wrap">
-            {galleryImages.map((g, i) => (
-              <div key={i} className="galleryItem"
-                style={{ backgroundImage: `url(${require(`../../images/gallery/${g.name}/1.jpg`)})` }}
-                onClick={() => changeOpenItem(i)}>
-                <div className="galleryItemInfo">
-                  <p className="galleryItemInfo_name"> {g.name}</p>
-                  <p className="galleryItemInfo_imageNum"> {g.imageNum}</p>
+            {galleryImages.map((g, i) => {
+              let name = ""
+              const regex = /[A-Z][A-Z]+|[A-Z][a-z]+|\d+/g;
+              g.name.match(regex).forEach(c => {
+                name += `<p>${c}</p>`
+              });
+
+              return (
+                <div key={g.name} className="galleryItem"
+                  style={{ backgroundImage: `url(${require(`../../images/gallery/${g.name}/1.jpg`)})` }}
+                  onClick={() => changeOpenItem(i)}>
+                  <div className="galleryItemInfo">
+                    <div className="galleryItemInfo_name" dangerouslySetInnerHTML={{ __html: name }}></div>
+                    <div className="galleryItemInfo_imageNum"><p>{g.imageNum}</p></div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         }
 

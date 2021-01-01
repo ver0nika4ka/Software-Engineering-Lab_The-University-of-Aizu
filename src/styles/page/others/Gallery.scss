@@ -57,6 +57,8 @@
 }
 
 .galleryItem {
+  display: flex;
+  flex-direction: column;
   height: 150.75px;
   width: 268px;
   background-size: cover;
@@ -80,23 +82,22 @@
 }
 
 .galleryItemInfo {
-  display: inline-flex;
+  margin: auto auto auto 0;
+  display: flex;
   background: white;
-  position: relative;
   width: auto;
-  max-width: 200px;
-  left: 0;
-  top: 56px;
+  max-width: 80%;
 
   p {
     margin: 0;
-    height: 100%;
     font-weight: bold;
   }
 
   .galleryItemInfo_name {
+    display: flex;
+    flex-wrap: wrap;
     padding: 4px 16px;
-    word-break: break-all;
+    margin: auto;
   }
 
   .galleryItemInfo_imageNum {
