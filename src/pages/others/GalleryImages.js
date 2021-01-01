@@ -30,6 +30,7 @@ function GalleryImages({ galleryName, galleryImages }) {
         {openItem === null &&
           <div className="galleryItems flex wrap">
             {galleryImages.map((g, i) => {
+              // Line feed setting
               let name = ""
               const regex = /[A-Z][A-Z]+|[A-Z][a-z]+|\d+/g;
               g.name.match(regex).forEach(c => {
