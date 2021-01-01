@@ -262,7 +262,7 @@ const resources = {
     translation:
     {
       '研究':
-        'Reserch',
+        'Research',
       '研究室について':
         'About us',
       '卒業テーマ':
