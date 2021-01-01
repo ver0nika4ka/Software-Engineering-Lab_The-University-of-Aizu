@@ -15,7 +15,7 @@ function Gallery() {
     name: '国際学会',
     link: 'internationl_conferences',
     galleryImages: [
-      { name: 'ICAT2020', imageNum: 2 },
+      { name: 'ICACT2020', imageNum: 2 },
       { name: 'ICACT2019', imageNum: 4 },
       { name: 'ICAIT2018', imageNum: 20 },
       { name: 'CPS18', imageNum: 6 },
