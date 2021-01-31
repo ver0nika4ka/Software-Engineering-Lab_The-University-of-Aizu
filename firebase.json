@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "software-engineering-lab-uoa",
-    "public": "./docs",
+    "public": "./build",
     "ignore": [
       "firebase.json",
       "**/.*",
