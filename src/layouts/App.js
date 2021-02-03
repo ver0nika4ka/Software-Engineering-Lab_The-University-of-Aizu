@@ -262,6 +262,7 @@ const App = () => {
                     </li>
                     <li className="menu_item">
                       <a href="https://www.u-aizu.ac.jp/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>{t('会津大学')}</a>
+                      <i class="fas fa-external-link-alt"></i>
                     </li>
                     <li className="menu_item">
                       <a href="https://www.u-aizu.ac.jp/access/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>{t('大学へのアクセス')}</a>
@@ -295,7 +296,7 @@ const App = () => {
         </header>
 
         <Switch>
-          <Redirect to="/" path='/~s1250090'></Redirect>
+          {/* <Redirect to="/" path='/~s1250090'></Redirect> */}
           <Route exact path='/'>
             <Layout title='' path={'/'}>
               <Top />

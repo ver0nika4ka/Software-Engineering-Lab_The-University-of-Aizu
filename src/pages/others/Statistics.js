@@ -9,6 +9,7 @@ function Statistics() {
         width="100%"
         height="600px"
         display="initial"
+        loading="loading..."
       />
     </div>
   );
