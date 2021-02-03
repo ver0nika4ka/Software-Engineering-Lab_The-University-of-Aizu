@@ -11,7 +11,7 @@ import Layout from '../layouts/Layout'
 import { useTranslation } from 'react-i18next';
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faSortDown } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faSortDown, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 // top
 import Top from "../pages/top/Top"
 // research
@@ -261,11 +261,10 @@ const App = () => {
                       <Link to="/others/gallery" onClick={closeMenu}>{t('ギャラリー')}</Link>
                     </li>
                     <li className="menu_item">
-                      <a href="https://www.u-aizu.ac.jp/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>{t('会津大学')}</a>
-                      <i class="fas fa-external-link-alt"></i>
+                      <a href="https://www.u-aizu.ac.jp/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>{t('会津大学')} <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
                     </li>
                     <li className="menu_item">
-                      <a href="https://www.u-aizu.ac.jp/access/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>{t('大学へのアクセス')}</a>
+                      <a href="https://www.u-aizu.ac.jp/access/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>{t('大学へのアクセス')} <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
                     </li>
                     <li className="menu_item">
                       <Link to="/others/statistics" onClick={closeMenu}>{t('アクセス統計')}</Link>
