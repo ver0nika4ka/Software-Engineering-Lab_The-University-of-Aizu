@@ -6,6 +6,7 @@ import {
   Link,
   Redirect
 } from "react-router-dom";
+import { homepage } from "../../package.json"
 import Layout from '../layouts/Layout'
 // i18n
 import { useTranslation } from 'react-i18next';
@@ -295,7 +296,7 @@ const App = () => {
         </header>
 
         <Switch>
-          {/* <Redirect to="/" path='/~s1250090'></Redirect> */}
+          <Redirect to="/" path={homepage}></Redirect>
           <Route exact path='/'>
             <Layout title='' path={'/'}>
               <Top />
