@@ -6,7 +6,7 @@ import {
   Link,
   Redirect
 } from "react-router-dom";
-import { homepage } from "../../package.json"
+import { homepage, siteName, description } from '../siteconfig.json'
 import Layout from '../layouts/Layout'
 // i18n
 import { useTranslation } from 'react-i18next';
@@ -62,73 +62,73 @@ const App = () => {
     {
       title: '研究室について',
       component: AboutUs,
-      path: "/research/about_us",
+      path: `${homepage}research/about_us`,
     },
     {
       title: '卒業テーマ',
       component: GraduationResearchThemes,
-      path: "/research/graduation_research_themes",
+      path: `${homepage}research/graduation_research_themes`,
     },
     {
       title: '国際交流',
       component: InternationalRelations,
-      path: "/research/international_relations",
+      path: `${homepage}research/international_relations`,
     },
     {
       title: 'ニュース',
       component: News,
-      path: "/research/news",
+      path: `${homepage}research/news`,
       fillWidth: true
     },
     {
       title: '論文集',
       component: Publications,
-      path: "/publication_list",
+      path: `${homepage}publication_list`,
     },
     {
       title: 'ITスペシャリストプログラム',
       component: ItSpecialistProgram,
-      path: "/it_specialist_program",
+      path: `${homepage}it_specialist_program`,
     },
     {
       title: '卒業生',
       component: Gaduated,
-      path: "/members/gaduated",
+      path: `${homepage}members/gaduated`,
     },
     {
       title: 'メンバー',
       component: Members,
-      path: "/members/member",
+      path: `${homepage}members/member`,
     },
     {
       title: '学生募集',
       component: ProspectiveStudents,
-      path: "/members/prospective_students",
+      path: `${homepage}members/prospective_students`,
     },
     {
       title: '業績',
       component: Achievements,
-      path: "/achievements/achievements",
+      path: `${homepage}achievements/achievements`,
     },
     {
       title: '国際学会',
       component: ConferencesAndWorkshops,
-      path: "/achievements/conferences_and_workshops",
+      path: `${homepage}achievements/conferences_and_workshops`,
     },
     {
       title: 'ギャラリー',
       component: Gallery,
-      path: "/others/gallery",
+      path: `${homepage}others/gallery`,
     },
     {
       title: 'アクセス統計',
       component: Statistics,
-      path: "/others/statistics",
+      path: `${homepage}others/statistics`,
     },
     {
       title: '開発者',
       component: Developers,
-      path: "/others/developers",
+      path: `${homepage}others/developers`,
     },
     {
       title: '404',
@@ -154,7 +154,7 @@ const App = () => {
           <nav>
             <ul className="menu">
               <li className={`menu_item ${selectedItem === 'Top' ? 'active' : ''}`}>
-                <Link to="/"
+                <Link to={homepage}
                   onClick={() => {
                     selectMenuItem('Top')
                     closeMenu()
@@ -175,16 +175,16 @@ const App = () => {
                 {openMenuItem[0] &&
                   <ul className="menu_list">
                     <li className="menu_item">
-                      <Link to="/research/about_us" onClick={closeMenu}>{t('研究室について')}</Link>
+                      <Link to={`${homepage}research/about_us`} onClick={closeMenu}>{t('研究室について')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/research/graduation_research_themes" onClick={closeMenu}>{t('卒業テーマ')}</Link>
+                      <Link to={`${homepage}research/graduation_research_themes`} onClick={closeMenu}>{t('卒業テーマ')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/research/international_relations" onClick={closeMenu}>{t('国際交流')}</Link>
+                      <Link to={`${homepage}research/international_relations`} onClick={closeMenu}>{t('国際交流')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/research/news" onClick={closeMenu}>{t('ニュース')}</Link>
+                      <Link to={`${homepage}research/news`} onClick={closeMenu}>{t('ニュース')}</Link>
                     </li>
                   </ul>
                 }
@@ -192,7 +192,7 @@ const App = () => {
 
 
               <li className={`menu_item ${selectedItem === '論文集' ? 'active' : ''}`}>
-                <Link to="/publication_list"
+                <Link to={`${homepage}publication_list`}
                   onClick={() => {
                     selectMenuItem('論文集')
                     closeMenu()
@@ -208,7 +208,7 @@ const App = () => {
                 {openMenuItem[1] &&
                   <ul className="menu_list">
                     <li className="menu_item">
-                      <Link to="/it_specialist_program" onClick={closeMenu}>{t('ITスペシャリストプログラム')}</Link>
+                      <Link to={`${homepage}it_specialist_program`} onClick={closeMenu}>{t('ITスペシャリストプログラム')}</Link>
                     </li>
                   </ul>
                 }
@@ -222,13 +222,13 @@ const App = () => {
                 {openMenuItem[2] &&
                   <ul className="menu_list">
                     <li className="menu_item">
-                      <Link to="/members/member" onClick={closeMenu}>{t('メンバー')}</Link>
+                      <Link to={`${homepage}members/member`} onClick={closeMenu}>{t('メンバー')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/members/gaduated" onClick={closeMenu}>{t('卒業生')}</Link>
+                      <Link to={`${homepage}members/gaduated`} onClick={closeMenu}>{t('卒業生')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/members/prospective_students" onClick={closeMenu}>{t('学生募集')}</Link>
+                      <Link to={`${homepage}members/prospective_students`} onClick={closeMenu}>{t('学生募集')}</Link>
                     </li>
                   </ul>
                 }
@@ -242,10 +242,10 @@ const App = () => {
                 {openMenuItem[3] &&
                   <ul className="menu_list">
                     <li className="menu_item">
-                      <Link to="/achievements/achievements" onClick={closeMenu}>{t('業績')}</Link>
+                      <Link to={`${homepage}achievements/achievements`} onClick={closeMenu}>{t('業績')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/achievements/conferences_and_workshops" onClick={closeMenu}>{t('国際学会')}</Link>
+                      <Link to={`${homepage}achievements/conferences_and_workshops`} onClick={closeMenu}>{t('国際学会')}</Link>
                     </li>
                   </ul>
                 }
@@ -259,7 +259,7 @@ const App = () => {
                 {openMenuItem[4] &&
                   <ul className="menu_list">
                     <li className="menu_item">
-                      <Link to="/others/gallery" onClick={closeMenu}>{t('ギャラリー')}</Link>
+                      <Link to={`${homepage}others/gallery`} onClick={closeMenu}>{t('ギャラリー')}</Link>
                     </li>
                     <li className="menu_item">
                       <a href="https://www.u-aizu.ac.jp/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>{t('会津大学')} <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
@@ -268,10 +268,10 @@ const App = () => {
                       <a href="https://www.u-aizu.ac.jp/access/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>{t('大学へのアクセス')} <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
                     </li>
                     <li className="menu_item">
-                      <Link to="/others/statistics" onClick={closeMenu}>{t('アクセス統計')}</Link>
+                      <Link to={`${homepage}others/statistics`} onClick={closeMenu}>{t('アクセス統計')}</Link>
                     </li>
                     <li className="menu_item">
-                      <Link to="/others/developers" onClick={closeMenu}>{t('開発者')}</Link>
+                      <Link to={`${homepage}others/developers`} onClick={closeMenu}>{t('開発者')}</Link>
                     </li>
                   </ul>
                 }
@@ -296,9 +296,9 @@ const App = () => {
         </header>
 
         <Switch>
-          <Redirect to="/" path={homepage}></Redirect>
-          <Route exact path='/'>
-            <Layout title='' path={'/'}>
+          {/* <Redirect to="/" path={homepage}></Redirect> */}
+          <Route exact path={homepage}>
+            <Layout title='' path={homepage}>
               <Top />
             </Layout>
           </Route>
