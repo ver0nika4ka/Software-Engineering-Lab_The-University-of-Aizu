@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
+  HashRouter,
   BrowserRouter as Router,
   Switch,
   Route,
@@ -148,7 +149,7 @@ const App = () => {
   }
 
   return (
-    <Router>
+    <HashRouter hashType="noslash">
       <div>
         <header className={`header ${isOpenMenu ? "open" : ""}`}>
           <nav>
@@ -304,7 +305,7 @@ const App = () => {
           </Route>
           {components.map((component, i) => {
             return (
-              <Route key={i} path={component.path}>
+              <Route key={i} exact path={component.path}>
                 <Layout title={t(component.title)} path={component.path} fillWidth={component.fillWidth}>
                   <component.component />
                 </Layout>
@@ -317,7 +318,7 @@ const App = () => {
           (c) 2015-2020 Software Engineering Lab, The University of Aizu
         </footer>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
