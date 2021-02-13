@@ -4,7 +4,6 @@ import "../../styles/page/research/News.scss"
 
 function News() {
   const [mails, setMails] = useState(null);
-  const [error, setError] = useState(null);
   const [selectedMail, setSelectedMail] = useState(0);
 
   // get mails
@@ -21,7 +20,6 @@ function News() {
         setMails(filterData)
       }).catch(e => {
         console.log(e);
-        setError(e)
         return e
       }).finally(() => {
         return "finally"
@@ -68,8 +66,18 @@ function News() {
         </>
         :
         <>
-          <p>Loading ...</p>
-          {error && <p>{error}</p>}
+          <div className="News_loading flex center">
+            <div className="News_lists">
+              <div className="News_item movingShade"></div>
+              <div className="News_item movingShade"></div>
+              <div className="News_item movingShade"></div>
+              <div className="News_item movingShade"></div>
+            </div>
+            <div className="News_mailContents">
+              <h3 className="News_mailTitle movingShade"></h3>
+              <h3 className="News_mailBody movingShade"></h3>
+            </div>
+          </div>
         </>
       }
     </div>

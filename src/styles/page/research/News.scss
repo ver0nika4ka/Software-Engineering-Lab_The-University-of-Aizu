@@ -80,6 +80,7 @@
     color: white;
     width: 80vw;
     margin: auto auto 0 auto;
+    font-size: 1.8rem;
   }
 }
 
@@ -110,5 +111,89 @@
     max-height: 70vh;
     width: 90vw;
     margin: 0 auto auto auto;
+
+    span {
+      font-size: 1rem;
+    }
+  }
+}
+
+.News_loading {
+  width: 100%;
+  pointer-events: none;
+
+  .News_lists {
+    width: 30vw;
+
+    @include max-screen($breakpoint-tablet) {
+      width: 100%;
+    }
+  }
+
+  .News_item {
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    margin-right: 56px;
+  }
+
+  .News_mailTitle {
+    height: 64px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 0;
+
+    @include max-screen($breakpoint-tablet) {
+      width: 90vw;
+      margin: 12vh auto 16px auto;
+    }
+  }
+
+  .News_mailBody {
+    width: 60vw;
+    height: 80vh;
+
+    @include max-screen($breakpoint-tablet) {
+      height: 70vh;
+      width: 90vw;
+      margin: 0 auto auto auto;
+    }
+  }
+}
+
+.movingShade {
+  background-size: 200% 200% !important;
+  -webkit-animation-duration: 1.6s;
+  animation-duration: 1.6s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: movingShade;
+  animation-name: movingShade;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+
+  background: #d8d8d8;
+  background-image: linear-gradient(to right, #d8d8d8 0%, #bdbdbd 20%, #d8d8d8 40%, #d8d8d8 100%);
+  background-repeat: no-repeat;
+}
+
+@keyframes movingShade {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+@-webkit-keyframes movingShade {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
   }
 }
