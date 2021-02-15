@@ -13,7 +13,8 @@ function Professors() {
 
   // If the language changes, this API will be re-executed
   useEffect(() => {
-    let baseUrl = 'https://software-engineering-lab.microcms.io/api/v1/professors'
+    const limit = 10
+    let baseUrl = `https://software-engineering-lab.microcms.io/api/v1/professors?limit=${limit}&filters=status[equals]true`
     // get API-KEY from .env
     const config = { 'X-API-KEY': process.env.REACT_APP_API_KEY };
     // get request
@@ -29,7 +30,7 @@ function Professors() {
 
   return (
     <div className="membersListWrapper flex">
-      <div className="Professors membersList flex wrap">
+      <div className="Professors membersList flex wrap center">
         {professors &&
           professors.map((member, i) => (
             <div className="member" key={i}>

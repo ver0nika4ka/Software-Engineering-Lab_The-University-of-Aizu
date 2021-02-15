@@ -29,6 +29,7 @@ import ItSpecialistProgram from "../pages/education/ItSpecialistProgram"
 import Gaduated from "../pages/members/Gaduated"
 import Members from "../pages/members/Members"
 import ProspectiveStudents from "../pages/members/ProspectiveStudents"
+import FormerProfessor from "../pages/members/FormerProfessor"
 // achievements
 import Achievements from "../pages/achievements/Achievements"
 import ConferencesAndWorkshops from "../pages/achievements/ConferencesAndWorkshops"
@@ -100,6 +101,11 @@ const App = () => {
       title: 'メンバー',
       component: Members,
       path: `${homepage}members/member`,
+    },
+    {
+      title: '元教授',
+      component: FormerProfessor,
+      path: `${homepage}members/former_professor`,
     },
     {
       title: '学生募集',
@@ -227,6 +233,9 @@ const App = () => {
                     </li>
                     <li className="menu_item">
                       <Link to={`${homepage}members/gaduated`} onClick={closeMenu}>{t('卒業生')}</Link>
+                    </li>
+                    <li className="menu_item">
+                      <Link to={`${homepage}members/former_professor`} onClick={closeMenu}>{t('元教授')}</Link>
                     </li>
                     <li className="menu_item">
                       <Link to={`${homepage}members/prospective_students`} onClick={closeMenu}>{t('学生募集')}</Link>

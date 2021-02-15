@@ -30,6 +30,8 @@ const resources = {
         'メンバー',
       '卒業生':
         '卒業生',
+      '元教授':
+        '元教授',
       '学生募集':
         '学生募集',
       '業績':
@@ -167,12 +169,6 @@ const resources = {
       // Publications
       '指導教員':
         '指導教員',
-      'ヴィタリー・クリューエフ 教授':
-        'ヴィタリー・クリューエフ 教授',
-      'エフゲニー・ピシキン 教授':
-        'エフゲニー・ピシキン 教授',
-      'モハメド・ハマダ 教授':
-        'モハメド・ハマダ 教授',
       '学生による論文':
         '学生による論文',
       // ItSpecialistProgram
@@ -225,6 +221,9 @@ const resources = {
       // Gaduated
       '修士課程': '修士課程',
       '学部': '学部',
+      // Former Professor
+      '元指導教員':
+        '元指導教員',
       // ProspectiveStudents
       'ソフトウェア工学講座は、ソフトウェア工学に興味がある学生を募集しています!': 'ソフトウェア工学講座は、ソフトウェア工学に興味がある学生を募集しています!',
       'やる気に満ち溢れている': 'やる気に満ち溢れている',
@@ -282,6 +281,8 @@ const resources = {
         'Members',
       '卒業生':
         'Graduated Members',
+      '元教授':
+        'Former Professors',
       '学生募集':
         'Prospective Students',
       '業績':
@@ -419,12 +420,6 @@ const resources = {
       // Publications
       '指導教員':
         'Professors',
-      'ヴィタリー・クリューエフ 教授':
-        'Prof. Vitaly Klyuev',
-      'エフゲニー・ピシキン 教授':
-        'Prof. Evgeny Pyshkin',
-      'モハメド・ハマダ 教授':
-        'Prof. Mohamed Hamada',
       '学生による論文':
         'Publications by students',
       // ItSpecialistProgram
@@ -477,6 +472,9 @@ const resources = {
       // Gaduated
       '修士課程': 'Masters Degree',
       '学部': 'Bachelors Degree',
+      // Former Professor
+      '元指導教員':
+        'Former Professors',
       // ProspectiveStudents
       'ソフトウェア工学講座は、ソフトウェア工学に興味がある学生を募集しています!': 'Software Engineering Lab is looking for students who are interested in Software Engineering for Internet Applications.',
       'やる気に満ち溢れている': 'If you are ambitious...',
