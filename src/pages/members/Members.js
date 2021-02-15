@@ -11,6 +11,7 @@ function Members() {
   const [t, i18n] = useTranslation();
 
   // *************** get members data *************** //
+  const [PhDStudents, setPhDStudents] = useState();
   const [masterStudents, setMasterStudents] = useState();
   const [undergraduateStudents, setUndergraduateStudents] = useState();
 
@@ -24,6 +25,7 @@ function Members() {
     axios.get(`${baseUrl}`, { headers: config })
       .then(response => {
         const data = response.data.contents
+        setPhDStudents(data.filter(d => d.grade_ja === "博士課程"))
         setMasterStudents(data.filter(d => d.grade_ja === "修士課程"))
         setUndergraduateStudents(data.filter(d => d.grade_ja === "学部生"))
       })
@@ -41,6 +43,26 @@ function Members() {
         </div>
 
         <h2 className="container_title">{t('学生')}</h2>
+        <div className="container_contentFrame">
+          <h4 className="container_subtitle">{t('博士課程')}</h4>
+          <div className="membersListWrapper">
+            <div className="membersList flex wrap">
+              {PhDStudents &&
+                PhDStudents.map((member, i) => (
+                  <div className="member" key={i}>
+                    <div className="flex column" >
+                      <div className="memberImage flex">
+                        <img src={member.image ? member.image.url : ""} alt="" />
+                      </div>
+                      <p className="memberName">{i18n.language === 'ja' ? member.name_ja : member.name_en}</p>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
         <div className="container_contentFrame">
           <h4 className="container_subtitle">{t('修士課程')}</h4>
           <div className="membersListWrapper">
