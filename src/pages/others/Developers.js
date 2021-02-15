@@ -44,7 +44,6 @@ function Developers() {
         <div className="container_contentFrame">
           <h2 className="container_title">{t('開発者一覧')}</h2>
 
-          {/* TODO: HeadressCMS */}
           <table class="table">
             <thead>
               <tr>
@@ -59,7 +58,11 @@ function Developers() {
                   <tr>
                     <td>{developer.year}</td>
                     <td>{i18n.language === 'ja' ? developer.name_ja : developer.name_en}</td>
-                    <td>{i18n.language === 'ja' ? developer.content_ja : developer.content_en}</td>
+                    <td>{i18n.language === 'ja' ? developer.content_ja : developer.content_en}
+                      {developer.link &&
+                        <a href={developer.link} target="_blank">, {t('詳細')}</a>
+                      }
+                    </td>
                   </tr>
                 ))
               }

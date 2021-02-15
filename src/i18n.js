@@ -243,6 +243,7 @@ const resources = {
       '年': '年',
       '名前	': '名前',
       '開発内容': '開発内容',
+      '詳細': '詳細',
       // Achievements
       '受賞': '受賞',
       '研究業績': '研究業績',
@@ -494,6 +495,7 @@ const resources = {
       '年': 'Year',
       '名前': 'Name',
       '開発内容': 'Contribution',
+      '詳細': 'Details',
       // Achievements
       '受賞': 'Awards',
       '研究業績': 'Scientific Achievements',
