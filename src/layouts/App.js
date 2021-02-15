@@ -315,7 +315,7 @@ const App = () => {
         </Switch>
 
         <footer className="footer">
-          (c) 2015-2020 Software Engineering Lab, The University of Aizu
+          (c) 2015-2021 Software Engineering Lab, The University of Aizu
         </footer>
       </div>
     </HashRouter>
