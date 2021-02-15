@@ -221,7 +221,7 @@ const resources = {
       // Gaduated
       '博士課程': '博士課程',
       '修士課程': '修士課程',
-      '学部': '学部',
+      '学部生': '学部生',
       // Former Professor
       '元指導教員':
         '元指導教員',
@@ -471,9 +471,9 @@ const resources = {
       // Members
       '学生': 'Students',
       // Gaduated
-      '博士課程': 'Doctors Degree',
-      '修士課程': 'Masters Degree',
-      '学部': 'Bachelors Degree',
+      '博士課程': 'Doctors Students',
+      '修士課程': 'Masters Students',
+      '学部生': 'Undergraduate Students',
       // Former Professor
       '元指導教員':
         'Former Professors',
