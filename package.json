@@ -2,7 +2,7 @@
   "name": "software-engineering-lab",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/",
+  "homepage": "/labs/is-se/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",

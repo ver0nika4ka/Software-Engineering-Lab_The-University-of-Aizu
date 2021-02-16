@@ -52,6 +52,7 @@ function Gallery() {
     name: '卒業式',
     link: 'graduation',
     galleryImages: [
+      { name: 'GraduationThesesDefence2021', imageNum: 4 },
       { name: 'GraduationThesesDefence2019', imageNum: 5 },
       { name: 'GraduationThesesDefence2017', imageNum: 12 },
       { name: 'GraduationThesesDefence2016', imageNum: 12 },
