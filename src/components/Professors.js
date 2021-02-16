@@ -20,8 +20,14 @@ function Professors() {
     // get request
     axios.get(`${baseUrl}`, { headers: config })
       .then(response => {
-        // console.log(response.data.contents);
-        setProfessors(response.data.contents)
+        const data = response.data.contents
+        // Sort in ascending order by name
+        data.sort((a, b) => {
+          if (a.name_en < b.name_en) return -1;
+          if (a.name_en > b.name_en) return 1;
+          return 0;
+        });
+        setProfessors(data)
       })
       .catch(error => {
         console.log(error);
