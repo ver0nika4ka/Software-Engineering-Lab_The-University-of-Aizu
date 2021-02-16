@@ -145,9 +145,11 @@ const App = () => {
   ]
 
   // メニューアイテムの切り替え
+  // Switching menu items
   const [selectedItem, setSelectedItem] = useState(null);
   const selectMenuItem = (itemName) => {
     // 選択中のアイテムが切り替わった場合
+    // When the selected item is switched
     if (selectedItem !== itemName) {
       resetOpenMenuItem()
       setSelectedItem(itemName)
@@ -157,6 +159,7 @@ const App = () => {
   return (
     <HashRouter hashType="noslash">
       <div>
+        {/* header */}
         <header className={`header ${isOpenMenu ? "open" : ""}`}>
           <nav>
             <ul className="menu">
@@ -172,10 +175,7 @@ const App = () => {
               <li className={`menu_item noLink ${selectedItem === '研究' ? 'active' : ''}`}
                 onClick={() => changeOpenMenuItem(0)}
               >
-                <a
-                  onClick={() => { selectMenuItem('研究') }}
-                // onMouseLeave={(e) => { selectMenuItem(e) }}
-                >
+                <a onClick={() => { selectMenuItem('研究') }}>
                   {t('研究')}
                   <FontAwesomeIcon icon={faSortDown} />
                 </a>
@@ -209,9 +209,10 @@ const App = () => {
 
               <li className={`menu_item noLink ${selectedItem === '教育' ? 'active' : ''}`}
                 onClick={() => changeOpenMenuItem(1)}>
-                <a
-                  onClick={() => { selectMenuItem('教育') }}
-                >{t('教育')}<FontAwesomeIcon icon={faSortDown} /></a>
+                <a onClick={() => { selectMenuItem('教育') }}>
+                  {t('教育')}
+                  <FontAwesomeIcon icon={faSortDown} />
+                </a>
                 {openMenuItem[1] &&
                   <ul className="menu_list">
                     <li className="menu_item">
@@ -305,24 +306,34 @@ const App = () => {
           </div>
         </header>
 
-        <Switch>
-          {/* <Redirect to="/" path={homepage}></Redirect> */}
-          <Route exact path={homepage}>
-            <Layout title='' path={homepage}>
-              <Top />
-            </Layout>
-          </Route>
-          {components.map((component, i) => {
-            return (
-              <Route key={i} exact path={component.path}>
-                <Layout title={t(component.title)} path={component.path} fillWidth={component.fillWidth}>
-                  <component.component />
-                </Layout>
-              </Route>
-            )
-          })}
-        </Switch>
+        {/* page */}
+        <div onClick={() => {
+          // Close all menu items when there are open menu items
+          if (openMenuItem.indexOf(true) !== -1 || isOpenMenu) {
+            resetOpenMenuItem()
+            closeMenu()
+          }
+        }}>
+          <Switch>
+            {/* <Redirect to="/" path={homepage}></Redirect> */}
+            <Route exact path={homepage}>
+              <Layout title='' path={homepage}>
+                <Top />
+              </Layout>
+            </Route>
+            {components.map((component, i) => {
+              return (
+                <Route key={i} exact path={component.path}>
+                  <Layout title={t(component.title)} path={component.path} fillWidth={component.fillWidth}>
+                    <component.component />
+                  </Layout>
+                </Route>
+              )
+            })}
+          </Switch>
+        </div>
 
+        {/* footer */}
         <footer className="footer">
           (c) 2015-2021 Software Engineering Lab, The University of Aizu
         </footer>

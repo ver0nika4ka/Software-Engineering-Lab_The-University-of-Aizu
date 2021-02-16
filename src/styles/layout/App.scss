@@ -71,12 +71,6 @@ nav {
 
 .menu_item {
   cursor: pointer;
-  // display: flex;
-
-  // svg {
-  //   margin: auto auto auto 0;
-  //   padding-right: 16px;
-  // }
 
   a {
     display: block;
@@ -104,6 +98,12 @@ nav {
 
     a {
       color: white;
+    }
+  }
+
+  @include max-screen($breakpoint-tablet) {
+    &:first-child.active {
+      background-color: inherit;
     }
   }
 }

@@ -4,15 +4,16 @@
 .container {
   max-width: 960px;
   min-height: 90vh;
-  margin: 88px auto 40px auto;
+  margin: 40px auto;
+  padding-top: 48px;
 
   @include max-screen($breakpoint-pc) {
     width: auto;
-    margin: 88px 32px 40px 32px;
+    margin: 40px 32px;
   }
 }
 
-.fillWidth{
+.fillWidth {
   margin: 88px 0 40px 0;
 }
 
