@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 // components
 import Professors from '../../components/Professors'
 // styles
-import "../../styles/page/members/Members.scss"
+import "../../styles/page/members/Members.css"
 
 function Members() {
   const [t, i18n] = useTranslation();

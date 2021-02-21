@@ -2,7 +2,7 @@ import React from 'react';
 // SEO
 import SEO from 'react-seo-component'
 import { siteName, description } from '../siteconfig.json'
-import "../styles/layout/Layout.scss"
+import "../styles/layout/Layout.css"
 
 const Layout = ({ title, path, fillWidth, children }) => {
   return (

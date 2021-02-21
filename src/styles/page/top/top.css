@@ -1,10 +1,9 @@
-@import "../../foundation/mixins.scss";
-@import "../../foundation/variable.scss";
-
 .home_header {
   margin-bottom: 40px;
+}
 
-  @include max-screen($breakpoint-tablet) {
+@media screen and (max-width: 768px) {
+  .home_header {
     flex-wrap: wrap;
   }
 }
@@ -14,10 +13,10 @@
   margin-top: auto;
   margin-bottom: auto;
   padding: 0 4px;
+}
 
-  img {
-    height: 100%;
-  }
+.home_logo img {
+  height: 100%;
 }
 
 .home_title {
@@ -26,8 +25,10 @@
   padding: 0 4px;
   font-size: 4vw;
   text-align: center;
+}
 
-  @include max-screen($breakpoint-tablet) {
+@media screen and (max-width: 768px) {
+  .home_title {
     width: 100%;
     margin: 20px auto 0 auto;
     font-size: 7vw;
@@ -42,8 +43,8 @@
 
 .home_footer {
   margin-top: 40px;
+}
 
-  .counter {
-    margin: auto 4px auto 0;
-  }
+.home_footer .counter {
+  margin: auto 4px auto 0;
 }

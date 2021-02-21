@@ -1,6 +1,3 @@
-@import "../../foundation/mixins.scss";
-@import "../../foundation/variable.scss";
-
 .membersListWrapper {
   max-width: 960px;
   width: auto;
@@ -11,16 +8,22 @@
   width: 960px;
   margin: auto;
   box-sizing: border-box;
+}
 
-  @include max-screen($breakpoint-pc) {
+@media screen and (max-width: 1024px) {
+  .membersList {
     width: 704px;
   }
+}
 
-  @include max-screen($breakpoint-tablet) {
+@media screen and (max-width: 768px) {
+  .membersList {
     width: 416px;
   }
+}
 
-  @include max-screen($breakpoint-mobile) {
+@media screen and (max-width: 480px) {
+  .membersList {
     width: auto;
   }
 }
@@ -29,16 +32,22 @@
   padding: 16px;
   width: 240px;
   box-sizing: border-box;
+}
 
-  @include max-screen($breakpoint-pc) {
+@media screen and (max-width: 1024px) {
+  .member {
     width: 234px;
   }
+}
 
-  @include max-screen($breakpoint-tablet) {
+@media screen and (max-width: 768px) {
+  .member {
     width: 208px;
   }
+}
 
-  @include max-screen($breakpoint-mobile) {
+@media screen and (max-width: 480px) {
+  .member {
     width: 100%;
   }
 }
@@ -50,11 +59,11 @@
   margin: auto;
   overflow: hidden;
   background-color: #f8f6ed;
+}
 
-  img {
-    height: 160px;
-    margin: auto;
-  }
+.memberImage img {
+  height: 160px;
+  margin: auto;
 }
 
 .memberName {

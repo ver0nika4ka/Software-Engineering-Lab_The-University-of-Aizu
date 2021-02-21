@@ -2,7 +2,7 @@ import React from 'react';
 // i18n
 import { useTranslation } from 'react-i18next';
 import About1 from '../../images/research/about_1.jpg'
-import "../../styles/page/research/AboutUs.scss"
+import "../../styles/page/research/AboutUs.css"
 
 function AboutUs() {
   const [t, i18n] = useTranslation();

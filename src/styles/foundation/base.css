@@ -1,9 +1,6 @@
-@import "../foundation/variable.scss";
-@import "../foundation/mixins.scss";
-
 html {
   font-size: 62.5%;
-  background-color: $jet;
+  background-color: #333333;
 }
 
 body {
@@ -14,29 +11,21 @@ body {
   font-size: 1.6rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 a,
-p,
-li,
-th,
-td {
-  color: $jet;
+h1, h2, h3, h4, h5 a, p, li, th, td {
+  color: #333333;
   line-height: 1.5;
 }
 
 a {
   text-decoration: none;
+}
 
-  a:visited {
-    color: inherit;
-  }
+a a:visited {
+  color: inherit;
 }
 
 a.link {
-  color: $link;
+  color: #337ab7;
   font-weight: bold;
 }
 
@@ -59,36 +48,48 @@ h1 {
 
 h2 {
   font-size: 4rem;
+}
 
-  @include max-screen($breakpoint-tablet) {
+@media screen and (max-width: 768px) {
+  h2 {
     font-size: 3.6rem;
   }
+}
 
-  @include max-screen($breakpoint-mobile) {
+@media screen and (max-width: 480px) {
+  h2 {
     font-size: 3.2rem;
   }
 }
 
 h3 {
   font-size: 3.2rem;
+}
 
-  @include max-screen($breakpoint-tablet) {
+@media screen and (max-width: 768px) {
+  h3 {
     font-size: 2.8rem;
   }
+}
 
-  @include max-screen($breakpoint-mobile) {
+@media screen and (max-width: 480px) {
+  h3 {
     font-size: 2.4rem;
   }
 }
 
 h4 {
   font-size: 2.4rem;
+}
 
-  @include max-screen($breakpoint-tablet) {
+@media screen and (max-width: 768px) {
+  h4 {
     font-size: 2rem;
   }
+}
 
-  @include max-screen($breakpoint-mobile) {
+@media screen and (max-width: 480px) {
+  h4 {
     font-size: 1.6rem;
   }
 }
@@ -99,23 +100,21 @@ button {
 
 table {
   width: 100%;
-
-  th,
-  td {
-    padding: 8px;
-    text-align: left;
-  }
-
-  th {
-    border-bottom: 2px solid #ddd;
-  }
-
-  td {
-    border-bottom: 1px solid #ddd;
-  }
 }
 
-// flex
+table th, table td {
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  border-bottom: 2px solid #ddd;
+}
+
+table td {
+  border-bottom: 1px solid #ddd;
+}
+
 .flex {
   display: flex;
 }
@@ -135,26 +134,17 @@ table {
 .wrap {
   flex-wrap: wrap;
 }
-// end of flex
 
-// airticle
-.article {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin-bottom: 16px;
-  }
-
-  a {
-    color: $link;
-  }
-
-  img {
-    width: 400px;
-    max-width: 100%;
-    margin: 16px auto;
-  }
+.article h1, .article h2, .article h3, .article h4, .article h5 {
+  margin-bottom: 16px;
 }
-// end of airticle
+
+.article a {
+  color: #337ab7;
+}
+
+.article img {
+  width: 400px;
+  max-width: 100%;
+  margin: 16px auto;
+}

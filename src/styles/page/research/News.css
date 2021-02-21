@@ -1,15 +1,12 @@
-@import "../../foundation/mixins.scss";
-@import "../../foundation/variable.scss";
-
 .News {
   width: 100vw;
   padding: 0 32px;
   box-sizing: border-box;
+}
 
-  .moz-txt-link-freetext {
-    color: $link;
-    font-weight: bold;
-  }
+.News .moz-txt-link-freetext {
+  color: #337ab7;
+  font-weight: bold;
 }
 
 .News_lists {
@@ -20,8 +17,10 @@
   margin-right: 24px;
   cursor: pointer;
   box-sizing: border-box;
+}
 
-  @include max-screen($breakpoint-tablet) {
+@media screen and (max-width: 768px) {
+  .News_lists {
     max-width: none;
     padding: 16px;
     margin: 0;
@@ -34,34 +33,38 @@
   border-radius: 16px;
   transition: all ease 300ms;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
 
-  p {
-    margin: 16px 0;
-  }
+.News_item p {
+  margin: 16px 0;
+}
 
-  &:hover {
-    background-color: $cultured;
-  }
+.News_item:hover {
+  background-color: #F8F8F8;
 }
 
 .News_mailContents {
   height: calc(100vh - 128px);
   overflow: hidden;
+}
 
-  @include max-screen($breakpoint-tablet) {
+@media screen and (max-width: 768px) {
+  .News_mailContents {
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgba($color: #000000, $alpha: 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
 .News_mailContentsModal {
   display: none;
+}
 
-  @include max-screen($breakpoint-tablet) {
+@media screen and (max-width: 768px) {
+  .News_mailContentsModal {
     display: block;
     position: absolute;
     top: 0;
@@ -75,8 +78,10 @@
 .News_mailTitle {
   padding: 0 0 16px 8px;
   z-index: 15;
+}
 
-  @include max-screen($breakpoint-tablet) {
+@media screen and (max-width: 768px) {
+  .News_mailTitle {
     color: white;
     width: 80vw;
     margin: auto auto 0 auto;
@@ -89,77 +94,84 @@
   max-height: 100vh;
   box-sizing: border-box;
   overflow: scroll;
-  background-color: $cultured;
+  background-color: #F8F8F8;
   padding: 40px;
   border-radius: 16px;
   z-index: 15;
+}
 
-  > div {
-    overflow: scroll;
-  }
+.News_mailBody>div {
+  overflow: scroll;
+}
 
-  span {
-    padding: 0 16px;
-    width: 100%;
-    text-decoration: none;
-    line-height: 1.5;
-    font-size: 1.6rem;
-    word-break: break-all;
-  }
+.News_mailBody span {
+  padding: 0 16px;
+  width: 100%;
+  text-decoration: none;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  word-break: break-all;
+}
 
-  @include max-screen($breakpoint-tablet) {
+@media screen and (max-width: 768px) {
+  .News_mailBody {
     max-height: 70vh;
     width: 90vw;
     margin: 0 auto auto auto;
-
-    span {
-      font-size: 1rem;
-    }
+  }
+  .News_mailBody span {
+    font-size: 1rem;
   }
 }
 
 .News_loading {
   width: 100%;
   pointer-events: none;
+}
 
-  .News_lists {
-    width: 30vw;
+.News_loading .News_lists {
+  width: 30vw;
+}
 
-    @include max-screen($breakpoint-tablet) {
-      width: 100%;
-    }
-  }
-
-  .News_item {
+@media screen and (max-width: 768px) {
+  .News_loading .News_lists {
     width: 100%;
-    height: 120px;
-    box-sizing: border-box;
-    padding: 8px 16px;
-    margin-bottom: 16px;
-    margin-right: 56px;
   }
+}
 
-  .News_mailTitle {
-    height: 64px;
-    margin-top: 8px;
-    margin-bottom: 16px;
-    padding-bottom: 0;
+.News_loading .News_item {
+  width: 100%;
+  height: 120px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  margin-right: 56px;
+}
 
-    @include max-screen($breakpoint-tablet) {
-      width: 90vw;
-      margin: 12vh auto 16px auto;
-    }
+.News_loading .News_mailTitle {
+  height: 64px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .News_loading .News_mailTitle {
+    width: 90vw;
+    margin: 12vh auto 16px auto;
   }
+}
 
-  .News_mailBody {
-    width: 60vw;
-    height: 80vh;
+.News_loading .News_mailBody {
+  width: 60vw;
+  height: 80vh;
+}
 
-    @include max-screen($breakpoint-tablet) {
-      height: 70vh;
-      width: 90vw;
-      margin: 0 auto auto auto;
-    }
+@media screen and (max-width: 768px) {
+  .News_loading .News_mailBody {
+    height: 70vh;
+    width: 90vw;
+    margin: 0 auto auto auto;
   }
 }
 
@@ -175,7 +187,6 @@
   animation-name: movingShade;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-
   background: #d8d8d8;
   background-image: linear-gradient(to right, #d8d8d8 0%, #bdbdbd 20%, #d8d8d8 40%, #d8d8d8 100%);
   background-repeat: no-repeat;
@@ -189,6 +200,7 @@
     background-position: -100% 0;
   }
 }
+
 @-webkit-keyframes movingShade {
   0% {
     background-position: 100% 0;
