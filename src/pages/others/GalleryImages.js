@@ -3,7 +3,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 // i18n
 import { useTranslation } from 'react-i18next';
 // styles
-import '../../styles/page/others/Gallery.scss'
+import '../../styles/page/others/Gallery.css'
 
 function GalleryImages({ galleryName, galleryImages }) {
   const [t, i18n] = useTranslation();
@@ -62,7 +62,7 @@ function GalleryImages({ galleryName, galleryImages }) {
             {(() => {
               const items = [];
               for (let j = 0; j < galleryImages[openItem].imageNum; j++) {
-                items.push(<img key={j} src={require(`../../images/gallery/${galleryImages[openItem].name}/${j + 1}.jpg`)}
+                items.push(<img key={j} alt={`${openItem}-${galleryImages[openItem].imageNum}`} src={require(`../../images/gallery/${galleryImages[openItem].name}/${j + 1}.jpg`)}
                   onClick={() => {
                     selectModalImage(galleryImages[openItem].name, j + 1)
                     window.scrollTo(0, 0)
@@ -87,7 +87,7 @@ function GalleryImages({ galleryName, galleryImages }) {
               setModalImage(null)
             }}>
             </div>
-            <img src={require(`../../images/gallery/${modalImage.name}/Original/${modalImage.num}.jpg`)}></img>
+            <img alt={`${modalImage.name}-${modalImage.num}`} src={require(`../../images/gallery/${modalImage.name}/Original/${modalImage.num}.jpg`)}></img>
           </div>
         }
 

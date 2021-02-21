@@ -3,7 +3,7 @@ import axios from 'axios'
 // i18n
 import { useTranslation } from 'react-i18next';
 // styles
-import "../../styles/page/members/Members.scss"
+import "../../styles/page/members/Members.css"
 
 function Gaduated() {
   const [t, i18n] = useTranslation();

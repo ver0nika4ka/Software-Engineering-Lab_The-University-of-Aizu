@@ -6,7 +6,7 @@ import Image1 from '../../images/education/1.jpg'
 import Image2 from '../../images/education/2.jpg'
 import PDF from '../../images/education/KlyuevITGroupConcludingRemarks.pdf'
 // styles
-import "../../styles/page/education/ItSpecialistProgram.scss"
+import "../../styles/page/education/ItSpecialistProgram.css"
 
 function ItSpecialistProgram() {
   const [t, i18n] = useTranslation();
