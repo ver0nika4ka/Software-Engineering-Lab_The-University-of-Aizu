@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 // images
 import Image1 from '../../images/education/1.jpg'
 import Image2 from '../../images/education/2.jpg'
+import PDF from '../../images/education/KlyuevITGroupConcludingRemarks.pdf'
 // styles
 import "../../styles/page/education/ItSpecialistProgram.scss"
 
@@ -65,7 +66,7 @@ function ItSpecialistProgram() {
 
         <div className="container_contentFrame">
           <p>{t('2009年8月13日に行われた修士論文発表会にて、指導担当者による批評と共に完結した。発表資料については以下のリンクからダウンロードできます。')}</p>
-          <a className="link" href="http://web-ext.u-aizu.ac.jp/labs/is-se/education/pdf/KlyuevITGroupConcludingRemarks.pdf" target="_blank" rel="noopener noreferrer" >[PDF]</a>
+          <a className="link" href={PDF} target="_blank" rel="noopener noreferrer" >[PDF]</a>
         </div>
       </div>
     </div>
