@@ -1,13 +1,12 @@
-@import "../foundation/mixins.scss";
-@import "../foundation/variable.scss";
-
 .container {
   max-width: 960px;
   min-height: 90vh;
   margin: 40px auto;
   padding-top: 48px;
+}
 
-  @include max-screen($breakpoint-pc) {
+@media screen and (max-width: 1024px) {
+  .container {
     width: auto;
     margin: 40px 32px;
   }
@@ -19,15 +18,14 @@
 
 .container_content {
   margin-bottom: 128px;
+}
 
-  ul,
-  ol {
-    margin-bottom: 24px;
-  }
+.container_content ul, .container_content ol {
+  margin-bottom: 24px;
+}
 
-  li {
-    margin-bottom: 8px;
-  }
+.container_content li {
+  margin-bottom: 8px;
 }
 
 .container_contentFrame {

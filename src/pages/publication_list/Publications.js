@@ -4,9 +4,6 @@ import axios from 'axios'
 import { useTranslation } from 'react-i18next';
 // components
 import Professors from '../../components/Professors'
-// styles
-import "../../styles/page/publication_list/Publications.scss"
-
 
 function Publications() {
   const [t, i18n] = useTranslation();

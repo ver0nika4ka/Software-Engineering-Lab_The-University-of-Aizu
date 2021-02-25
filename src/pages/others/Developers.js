@@ -44,7 +44,7 @@ function Developers() {
         <div className="container_contentFrame">
           <h2 className="container_title">{t('開発者一覧')}</h2>
 
-          <table class="table">
+          <table className="table">
             <thead>
               <tr>
                 <th scope="col">{t('年')}</th>
@@ -55,12 +55,12 @@ function Developers() {
             <tbody>
               {developers &&
                 developers.map((developer, i) => (
-                  <tr>
+                  <tr key={i}>
                     <td>{developer.year}</td>
                     <td>{i18n.language === 'ja' ? developer.name_ja : developer.name_en}</td>
                     <td>{i18n.language === 'ja' ? developer.content_ja : developer.content_en}
                       {developer.link &&
-                        <a href={developer.link} target="_blank">, {t('詳細')}</a>
+                        <>, <a href={developer.link} target="_blank" rel="noopener noreferrer">{t('詳細')}</a></>
                       }
                     </td>
                   </tr>

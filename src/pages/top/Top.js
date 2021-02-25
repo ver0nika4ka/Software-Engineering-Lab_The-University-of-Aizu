@@ -13,7 +13,7 @@ import Top3 from '../../images/top/top_3.jpg'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 // styles
-import '../../styles/page/top/top.scss'
+import '../../styles/page/top/top.css'
 
 const Top = () => {
   const [t, i18n] = useTranslation();

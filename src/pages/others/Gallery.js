@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 // Gallery
 import GalleryImages from './GalleryImages'
 // styles
-import '../../styles/page/others/Gallery.scss'
+import '../../styles/page/others/Gallery.css'
 
 function Gallery() {
   const [t, i18n] = useTranslation();

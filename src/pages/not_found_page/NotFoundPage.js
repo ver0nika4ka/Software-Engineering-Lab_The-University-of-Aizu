@@ -2,7 +2,7 @@ import React from 'react';
 // i18n
 import { useTranslation } from 'react-i18next';
 // styles
-import '../../styles/page/not_found_page/NotFoundPage.scss'
+import '../../styles/page/not_found_page/NotFoundPage.css'
 
 const NotFoundPage = () => {
   const [t, i18n] = useTranslation();

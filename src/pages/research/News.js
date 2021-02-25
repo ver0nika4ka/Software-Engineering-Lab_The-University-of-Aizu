@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import "../../styles/page/research/News.scss"
+import "../../styles/page/research/News.css"
 
 function News() {
   const [mails, setMails] = useState(null);

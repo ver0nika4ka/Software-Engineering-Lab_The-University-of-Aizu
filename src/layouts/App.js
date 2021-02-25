@@ -40,7 +40,7 @@ import Developers from "../pages/others/Developers"
 // not_found_page
 import NotFoundPage from "../pages/not_found_page/NotFoundPage"
 // styles
-import '../styles/layout/App.scss';
+import '../styles/layout/App.css';
 
 const App = () => {
   const [openMenuItem, setOpenMenuItem] = useState([false, false, false, false]);
