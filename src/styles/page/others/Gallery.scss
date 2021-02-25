@@ -123,6 +123,9 @@
     width: 40px;
     height: 40px;
     transition: all ease 300ms;
+    margin-left: auto;
+    margin-right: 0;
+
 
     &:hover {
       transform: scale(1.1);
@@ -137,6 +140,10 @@
     padding: 10px;
     cursor: pointer;
   }
+}
+
+.galleryItemContents_title{
+  margin-left:0;
 }
 
 .modal {
@@ -161,4 +168,16 @@
     transform: translate(-50%, -50%);
     z-index: 20000;
   }
+}
+
+.modal .carousel-root{
+  position: relative;
+  z-index: 20000;
+}
+
+.modal .carousel-root,.modal  .carousel,
+.modal .slider-wrapper, .modal .slider{
+  width:100vw;
+  height: 100vh;
+
 }
